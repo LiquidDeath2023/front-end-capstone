@@ -1,11 +1,13 @@
 import React from 'react';
 import './ReviewsRatings.css';
+import ReviewsList from './ReviewsList';
 
 function ReviewsRatings() {
   console.log('hello world');
   return (
-    <div className="ratingsreviews-container">
-      Hello World from Reviews&Ratings!
+    <div className="ratingsReviewsContainer">
+      <div>Summary Component</div>
+      <ReviewsList />
     </div>
   );
 }
