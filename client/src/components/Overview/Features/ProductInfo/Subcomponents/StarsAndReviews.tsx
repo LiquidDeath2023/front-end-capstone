@@ -28,7 +28,7 @@ function StarsAndReviews({reviews}) {
   };
   return (
     <div>
-      <div className="stars">
+      <div className="star-container">
         {reviewStars(reviewAvg())}
       </div>
       <h4>Read all reviews</h4>
