@@ -1,3 +1,49 @@
-.q-and-a-container {
+.main-QandA-container {
   background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 50vw;
+}
+
+.search-container {
+  background-color: rgba(255, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search-container input {
+  padding: 10px;
+  width: 95%;
+  border: 2px solid green;
+  border-right: none;
+}
+
+.search-container i {
+  background-color: white;
+  padding: 10px;
+  border: 2px solid green;
+  /* border-left: none; */
+}
+
+.QandA-container {
+  background-color: rgba(0, 255, 0, 0.1);
+  margin-top: 5px;
+  border-top: 5px solid orange;
+}
+
+.Q-container {
+  background-color: rgba(0, 255, 0, 0.2);
+  padding: 5px;
+}
+
+.Q-liner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.A-container {
+  background-color: rgba(0, 255, 0, 0.3);
+  margin: 5px 0;
+  border: 1px solid black;
+  padding: 5px;
 }
