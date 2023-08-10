@@ -8,7 +8,14 @@ function ReviewsList({ getReviewsData }) {
 
   console.log('visibleList', visibleList);
 
-  const reviewTile = getReviewsData.results.map((review) =><div key={review.review_id}>review.rating</div>).slice(0, listLength);
+  const reviewTile = getReviewsData.results.map((review) =>
+    <div key={review.review_id}>review.rating</div>).slice(0, listLength);
+
+  const handleClick = () => {
+    const prevLength = listLength;
+    setListLength(prevLength + 2);
+    console.log('click');
+  };
 
   return (
     <div className="reviewsList">
@@ -16,8 +23,8 @@ function ReviewsList({ getReviewsData }) {
       {/* <div>Sorting</div> */}
       {reviewTile}
       {/* <div>Individual Review Tile</div> */}
-      {/* <div>More Reviews</div>
-      <div>Add Review</div> */}
+      <button className="moreReviewsButton" type="button" onClick={handleClick}>More Reviews</button>
+      {/* <div>Add Review</div> */}
     </div>
   );
 }
