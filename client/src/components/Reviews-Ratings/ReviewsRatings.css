@@ -5,6 +5,8 @@
 
 .reviewsList {
   border-style: solid;
+  height: 180px; /* Set the desired height */
+  overflow: auto; /* Enable scrolling */
 }
 
 .ratingBreakdown {
