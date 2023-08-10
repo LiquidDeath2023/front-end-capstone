@@ -1,6 +1,19 @@
 import React from 'react';
 
 function StarsAndReviews({reviews}) {
+  function reviewAvgs({reviews}) {
+    let total = 0;
+    reviews.results.forEach((review) => {
+      total += review.rating;
+    });
+    const average = total / reviews.results.length;
+    return average;
+  }
+  // if u get 3.8, should be 3 stars and 80% of last star
+  const stars = () => {
+    const string = 'hello';
+    return string;
+  };
   // finds average of reviews
   function reviewAvg() {
     let total = 0;
