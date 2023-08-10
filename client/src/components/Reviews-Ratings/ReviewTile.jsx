@@ -12,15 +12,15 @@ function ReviewTile({review}) {
 
 
     result = star.repeat(numberOfFullStars) + numberOfPartialStars;
-    console.log(result);
+    return result;
   }
 
-  renderStarRating(3.76);
+  const starRating = renderStarRating(review.rating);
 
   return (
     <div className="reviewTile">
       {/* <h2>Review Tile</h2> */}
-      <div className="starRating">***</div>
+      <div className="starRating">{starRating}</div>
       <div className="reviewDate">{review.date}</div>
       <div className="reviewSummary">{review.summary}</div>
       <div className="reviewBody">{review.body}</div>
