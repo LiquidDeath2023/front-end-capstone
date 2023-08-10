@@ -15,6 +15,3 @@ function QandA() {
 }
 
 export default QandA;
-
-
-// <Question question={fakeQuestion} />
