@@ -1,7 +1,12 @@
 .ratingsReviewsContainer {
+  border-style: solid;
   background-color: rgba(15, 149, 80, 0.1);
 }
 
 .reviewsList {
+  border-style: solid;
+}
 
+.ratingBreakdown {
+  border-style: solid;
 }

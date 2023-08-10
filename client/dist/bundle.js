@@ -43,8 +43,12 @@
           '__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ "./node_modules/css-loader/dist/runtime/noSourceMaps.js");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `.ratingsReviewsContainer {\n  background-color: rgba(15, 149, 80, 0.1);\n}\n\n.reviewsList {\n\n}`, ""]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Reviews-Ratings/ReviewsRatings.css?./node_modules/css-loader/dist/cjs.js'
         );
 
+<<<<<<< HEAD
         /***/
       },
+=======
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `.ratingsReviewsContainer {\n  border-style: solid;\n  background-color: rgba(15, 149, 80, 0.1);\n}\n\n.reviewsList {\n  border-style: solid;\n}\n\n.ratingBreakdown {\n  border-style: solid;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Reviews-Ratings/ReviewsRatings.css?./node_modules/css-loader/dist/cjs.js");
+>>>>>>> 03c2b4d (Working on example data - committing before pulling in changes from master)
 
     /***/ "./node_modules/css-loader/dist/runtime/api.js":
       /*!*****************************************************!*\
@@ -322,8 +326,17 @@
         /***/
       },
 
+<<<<<<< HEAD
     /***/ "./client/src/index.tsx":
       /*!******************************!*\
+=======
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ReviewsRatings_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReviewsRatings.css */ \"./client/src/components/Reviews-Ratings/ReviewsRatings.css\");\n/* harmony import */ var _ReviewsList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ReviewsList */ \"./client/src/components/Reviews-Ratings/ReviewsList.tsx\");\n\n\n\nfunction ReviewsRatings() {\n    console.log('hello world');\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", { className: \"ratingsReviewsContainer\" },\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", null, \"Summary Component\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ReviewsList__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReviewsRatings);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Reviews-Ratings/ReviewsRatings.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/index.tsx":
+/*!******************************!*\
+>>>>>>> 03c2b4d (Working on example data - committing before pulling in changes from master)
   !*** ./client/src/index.tsx ***!
   \******************************/
       /***/ (
