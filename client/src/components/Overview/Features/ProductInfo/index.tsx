@@ -3,12 +3,11 @@ import StarsAndReviews from './Subcomponents/StarsAndReviews';
 import ProductIdentifiers from './Subcomponents/ProductIdentifiers';
 import Sharing from './Subcomponents/Sharing';
 
-function ProductInfo() {
+function ProductInfo({product, reviews}) {
   return (
     <div>
-      <h2>Hello Product Info!</h2>
-      <StarsAndReviews />
-      <ProductIdentifiers />
+      <StarsAndReviews reviews={reviews} />
+      <ProductIdentifiers product={product} />
       <Sharing />
     </div>
   );
