@@ -3,11 +3,6 @@ import './QuestionsAndAnswers.css';
 import Search from './Questions-Answers/Search';
 import QandA from './Questions-Answers/QandA';
 import ExpandAndAdd from './Questions-Answers/ExpandAndAdd';
-import myData from './Questions-Answers/Helpers/fakeData';
-import utils from './Questions-Answers/Helpers/helpers';
-
-const listOfQuestions = myData.fakeData.results.sort(utils.compare('question_helpfulness'));
-const A = listOfQuestions.length;
 
 function QuestionsAndAnswers() {
   const [numOfQuestions, setNumOfQuestions] = useState(4);
@@ -45,11 +40,9 @@ function QuestionsAndAnswers() {
   return (
     <div className="qa-main-container">
       <div>QUESTIONS & ANSWERS</div>
-      {/* <div>SEARCH COMPONENT HIDDEN</div> */}
-      <Search filterQs={filterQs} />
-      <QandA fakeData={fakeData} />
-      <ExpandAndAdd add2={add2} collapse={collapse} loadQuestions={loadQuestions} />
-      {/* <div>EXPAND AND ADD COMPONENT HIDDEN</div> */}
+      <Search />
+      <QandA />
+      <ExpandAndAdd />
     </div>
   );
 
