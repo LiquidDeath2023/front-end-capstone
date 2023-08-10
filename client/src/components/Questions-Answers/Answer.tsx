@@ -8,12 +8,12 @@ function Answer(props) {
   const helpfulness = answer.helpfulness;
 
   return (
-    <>
-      <div className="A-container">{`A: ${body}`}</div>
+    <div className="answer-container">
+      <div>{`A: ${body}`}</div>
       <div>
         {`by ${user}, ${date} | Helpful? Yes (${helpfulness}) | Report`}
       </div>
-    </>
+    </div>
 
   );
 }

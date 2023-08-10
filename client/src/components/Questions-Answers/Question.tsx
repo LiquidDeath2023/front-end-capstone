@@ -1,21 +1,16 @@
 import React from 'react';
 import Answer from './Answer';
-import { myFakeAnswers } from './fakeData';
+import myData from './fakeData';
 
-interface QuestionProps {
-  question: {
-    question_body: string;
-  };
-}
+const myFakeAnswers = myData.fakeAnswers.results;
 
-function Question(props: QuestionProps) {
-  const [fakeAnswers, setFakeAnswers] = React.useState(myFakeAnswers.results);
-
+function Question(props) {
+  const [fakeAnswers, setFakeAnswers] = React.useState(myFakeAnswers);
   const { question } = props;
 
   return (
-    <div className="Q-container">
-      <div className="Q-liner">
+    <div className="question-container">
+      <div className="question-title-container">
         <div>
           {`Q: ${question.question_body}`}
         </div>

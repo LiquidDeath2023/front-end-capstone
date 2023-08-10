@@ -92,7 +92,9 @@ const fakeAnswers = {
   ],
 };
 
-module.exports = {
-  fakeData,
-  myFakeAnswers: fakeAnswers,
-};
+// module.exports = {
+//   fakeData,
+//   myFakeAnswers: fakeAnswers,
+// };
+
+export default { fakeData, fakeAnswers };
