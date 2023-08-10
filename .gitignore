@@ -10,6 +10,7 @@ bundle.js
 .eslintrc.json
 .prettierrc.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 bundle.js
 configs
 <<<<<<< HEAD
@@ -21,3 +22,6 @@ dist
 =======
 client/dist
 >>>>>>> 4980cfe (createdFakeData)
+=======
+client/dists
+>>>>>>> 5e6c786 (updated .gitignore)
