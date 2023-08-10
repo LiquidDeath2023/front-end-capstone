@@ -1,6 +1,8 @@
-import React from 'react';
-import './app.css';
-import QuestionsAndAnswers from './components/QuestionsAndAnswers';
+/* eslint-disable import/no-unresolved */
+import React from "react";
+import "./app.css";
+import QuestionsAndAnswers from "./components/QuestionsAndAnswers";
+import Cards from "./components/Related/Cards";
 
 // nothing special here
 function App() {
@@ -9,7 +11,7 @@ function App() {
       <h1>Ben Component</h1>
       <h1>Kurt Component</h1>
       <QuestionsAndAnswers />
-      <h1>Jon Component</h1>
+      <Cards />
     </div>
   );
 }
