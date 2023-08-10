@@ -1,26 +1,30 @@
 import React from 'react';
 import Answer from './Answer';
+import { myFakeAnswers } from './fakeData';
 
 interface QuestionProps {
-  question: string;
+  question: {
+    question_body: string;
+  };
 }
 
 function Question(props: QuestionProps) {
+  const [fakeAnswers, setFakeAnswers] = React.useState(myFakeAnswers.results);
+
   const { question } = props;
-  const fakeAnswers: string[] = ['Fake Answer A', 'Fake Answer B'];
 
   return (
     <div className="Q-container">
       <div className="Q-liner">
         <div>
-          {`Q: ${question}`}
+          {`Q: ${question.question_body}`}
         </div>
         <div>
-          {'Helpful? Yes(#) | <Add Answer>'}
+          {`Helpful? Yes (${question.question_helpfulness}) | <Add Answer>`}
         </div>
       </div>
       {
-        fakeAnswers.map((fakeAnswer) => <Answer answer={fakeAnswer} key={fakeAnswer} />)
+        fakeAnswers.map((fakeAnswer) => <Answer answer={fakeAnswer} key={fakeAnswer.answer_id} />)
       }
       <div>LOAD MORE ANSWERS</div>
     </div>

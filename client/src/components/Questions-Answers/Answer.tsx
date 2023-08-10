@@ -1,17 +1,17 @@
 import React from 'react';
 
-interface AnswerProps {
-  answer: string;
-}
-
-function Answer(props: AnswerProps) {
+function Answer(props) {
   const { answer } = props;
+  const body = answer.body;
+  const user = answer.answerer_name;
+  const date = answer.date.slice(0, 10);
+  const helpfulness = answer.helpfulness;
 
   return (
     <>
-      <div className="A-container">{`A: ${answer}`}</div>
+      <div className="A-container">{`A: ${body}`}</div>
       <div>
-        {'by <username>, <data> | Helpful? Yes(#) | Report'}
+        {`by ${user}, ${date} | Helpful? Yes (${helpfulness}) | Report`}
       </div>
     </>
 
