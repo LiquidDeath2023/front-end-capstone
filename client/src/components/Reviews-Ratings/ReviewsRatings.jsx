@@ -10,7 +10,6 @@ function ReviewsRatings() {
   return (
     <div className="ratingsreviews-container">
       <ReviewList getReviewsData={getReviewsData} />
-      {/* <div>Hello World?</div> */}
       {/* <RatingBreakdown /> */}
     </div>
   );

@@ -1,27 +1,3 @@
 node_modules
 exampleData
-<<<<<<< HEAD
-<<<<<<< HEAD
 configs
-=======
-=======
-bundle.js
->>>>>>> 0eeae3f (updated git ignore and bundle.js)
-.eslintrc.json
-.prettierrc.json
-<<<<<<< HEAD
-<<<<<<< HEAD
-bundle.js
-configs
-<<<<<<< HEAD
-
->>>>>>> 5b3a492 (tailwind)
-=======
-dist
->>>>>>> 28e4419 ( have no idea)
-=======
-client/dist
->>>>>>> 4980cfe (createdFakeData)
-=======
-client/dists
->>>>>>> 5e6c786 (updated .gitignore)
