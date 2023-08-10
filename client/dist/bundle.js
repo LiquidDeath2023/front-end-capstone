@@ -9,6 +9,63 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+<<<<<<< HEAD
+=======
+/***/ "./node_modules/css-loader/dist/cjs.js!./client/src/app.css":
+/*!******************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./client/src/app.css ***!
+  \******************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `@tailwind base;\n@tailwind components;\n@tailwind utilities;`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/app.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./client/src/components/Overview/OverviewStyles.css":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./client/src/components/Overview/OverviewStyles.css ***!
+  \*************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `.overview-container {\n  background-color: rgba(61, 171, 239, 0.2);\n}\n\n.star {\n  display: inline-block;\n  position: relative;\n  font-size: 100px;\n  color: #ddd;\n}\n\n.star:after {\n  font-family: FontAwesome;\n  content: \"\\\\f005\";\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  overflow: hidden;\n  color: #f80;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Overview/OverviewStyles.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./client/src/components/QuestionsAndAnswers.css":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./client/src/components/QuestionsAndAnswers.css ***!
+  \*********************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `.q-and-a-container {\n  background-color: rgba(0, 0, 0, 0.1);\n  width: 75vw;\n}\n\n.search-container {\n  background-color: rgba(255, 0, 0, 0.1);\n  padding: 10px;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n}\n\n.search-container input {\n  padding: 10px;\n  width: 95%;\n  border: 2px solid green;\n  border-right: none;\n}\n\n.search-container i {\n  background-color: white;\n  padding: 10px;\n  border: 2px solid green;\n  /* border-left: none; */\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/QuestionsAndAnswers.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\nmodule.exports = function (cssWithMappingToString) {\n  var list = [];\n\n  // return the list of modules as css string\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = \"\";\n      var needLayer = typeof item[5] !== \"undefined\";\n      if (item[4]) {\n        content += \"@supports (\".concat(item[4], \") {\");\n      }\n      if (item[2]) {\n        content += \"@media \".concat(item[2], \" {\");\n      }\n      if (needLayer) {\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\n      }\n      content += cssWithMappingToString(item);\n      if (needLayer) {\n        content += \"}\";\n      }\n      if (item[2]) {\n        content += \"}\";\n      }\n      if (item[4]) {\n        content += \"}\";\n      }\n      return content;\n    }).join(\"\");\n  };\n\n  // import a list of modules into the list\n  list.i = function i(modules, media, dedupe, supports, layer) {\n    if (typeof modules === \"string\") {\n      modules = [[null, modules, undefined]];\n    }\n    var alreadyImportedModules = {};\n    if (dedupe) {\n      for (var k = 0; k < this.length; k++) {\n        var id = this[k][0];\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n    for (var _k = 0; _k < modules.length; _k++) {\n      var item = [].concat(modules[_k]);\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        continue;\n      }\n      if (typeof layer !== \"undefined\") {\n        if (typeof item[5] === \"undefined\") {\n          item[5] = layer;\n        } else {\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\n          item[5] = layer;\n        }\n      }\n      if (media) {\n        if (!item[2]) {\n          item[2] = media;\n        } else {\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\n          item[2] = media;\n        }\n      }\n      if (supports) {\n        if (!item[4]) {\n          item[4] = \"\".concat(supports);\n        } else {\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\n          item[4] = supports;\n        }\n      }\n      list.push(item);\n    }\n  };\n  return list;\n};\n\n//# sourceURL=webpack://front-end-capstone/./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/noSourceMaps.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/noSourceMaps.js ***!
+  \**************************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=webpack://front-end-capstone/./node_modules/css-loader/dist/runtime/noSourceMaps.js?");
+
+/***/ }),
+
+>>>>>>> 74c01e7 (Build functional review stars)
 /***/ "./node_modules/react-dom/cjs/react-dom.development.js":
 /*!*************************************************************!*\
   !*** ./node_modules/react-dom/cjs/react-dom.development.js ***!
@@ -92,7 +149,109 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
   \****************************/
 /***/ (() => {
 
+<<<<<<< HEAD
 eval("throw new Error(\"Module parse failed: Unexpected token (15:4)\\nFile was processed with these loaders:\\n * ./node_modules/ts-loader/index.js\\nYou may need an additional loader to handle the result of these loaders.\\n|                             React.createElement(Cards, null);\\n|     div >\\n>     ;\\n|     ;\\n| }\");\n\n//# sourceURL=webpack://front-end-capstone/./client/src/App.tsx?");
+=======
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.css */ \"./client/src/app.css\");\n/* harmony import */ var _components_QuestionsAndAnswers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/QuestionsAndAnswers */ \"./client/src/components/QuestionsAndAnswers.tsx\");\n/* harmony import */ var _components_Overview__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Overview */ \"./client/src/components/Overview/index.tsx\");\n\n\n\n\nfunction App() {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null,\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Overview__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, \"Kurt Component\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_QuestionsAndAnswers__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, \"Jon Component\")));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/App.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Overview/Features/AddCart/index.tsx":
+/*!*******************************************************************!*\
+  !*** ./client/src/components/Overview/Features/AddCart/index.tsx ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction AddCart() {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null,\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h4\", null, \"Add to cart\")));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AddCart);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Overview/Features/AddCart/index.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Overview/Features/ImageGallery/index.tsx":
+/*!************************************************************************!*\
+  !*** ./client/src/components/Overview/Features/ImageGallery/index.tsx ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction ImageGallery() {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null,\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h4\", null, \"Big picture with little pictures\")));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ImageGallery);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Overview/Features/ImageGallery/index.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Overview/Features/ProductInfo/Subcomponents/ProductIdentifiers.tsx":
+/*!**************************************************************************************************!*\
+  !*** ./client/src/components/Overview/Features/ProductInfo/Subcomponents/ProductIdentifiers.tsx ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction ProductIdentifiers() {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null,\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h4\", null, \"Elixirs\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", null, \"Liquid Death Vinyl\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", null, \"$799.99\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h4\", null, \"Description and Slogan\")));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProductIdentifiers);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Overview/Features/ProductInfo/Subcomponents/ProductIdentifiers.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Overview/Features/ProductInfo/Subcomponents/Sharing.tsx":
+/*!***************************************************************************************!*\
+  !*** ./client/src/components/Overview/Features/ProductInfo/Subcomponents/Sharing.tsx ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction Sharing() {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null,\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", null, \"Facebook\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", null, \"Pinterest\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", null, \"Twitter\")));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Sharing);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Overview/Features/ProductInfo/Subcomponents/Sharing.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Overview/Features/ProductInfo/Subcomponents/StarsAndReviews.tsx":
+/*!***********************************************************************************************!*\
+  !*** ./client/src/components/Overview/Features/ProductInfo/Subcomponents/StarsAndReviews.tsx ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction StarsAndReviews({ reviews }) {\n    // finds average of reviews\n    function reviewAvg() {\n        let total = 0;\n        reviews.results.forEach((review) => {\n            total += review.rating;\n        });\n        const average = total / reviews.results.length;\n        return average;\n    }\n    // creates stars\n    const reviewStars = () => {\n        const average = reviewAvg();\n        const stars = [];\n        for (let i = 0; i < Math.floor(average); i++) {\n            stars.push(react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"i\", { className: \"star fa-regular fa-star\" }));\n        }\n        if (average - Math.floor(average) > 0) {\n            const percent = (average - Math.floor(average)) * 100;\n            stars.push(react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"i\", { className: \"star fa-regular fa-star\", style: { width: percent } }));\n        }\n        return stars;\n    };\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null,\n        reviewStars(),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h4\", null, \"Read all reviews\")));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (StarsAndReviews);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Overview/Features/ProductInfo/Subcomponents/StarsAndReviews.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Overview/Features/ProductInfo/index.tsx":
+/*!***********************************************************************!*\
+  !*** ./client/src/components/Overview/Features/ProductInfo/index.tsx ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Subcomponents_StarsAndReviews__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Subcomponents/StarsAndReviews */ \"./client/src/components/Overview/Features/ProductInfo/Subcomponents/StarsAndReviews.tsx\");\n/* harmony import */ var _Subcomponents_ProductIdentifiers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Subcomponents/ProductIdentifiers */ \"./client/src/components/Overview/Features/ProductInfo/Subcomponents/ProductIdentifiers.tsx\");\n/* harmony import */ var _Subcomponents_Sharing__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Subcomponents/Sharing */ \"./client/src/components/Overview/Features/ProductInfo/Subcomponents/Sharing.tsx\");\n\n\n\n\nfunction ProductInfo({ product, reviews }) {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null,\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Subcomponents_StarsAndReviews__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { reviews: reviews }),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Subcomponents_ProductIdentifiers__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { product: product }),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Subcomponents_Sharing__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProductInfo);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Overview/Features/ProductInfo/index.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Overview/Features/StyleSelector/index.tsx":
+/*!*************************************************************************!*\
+  !*** ./client/src/components/Overview/Features/StyleSelector/index.tsx ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction StyleSelector() {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null,\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h4\", null, \"style1, style2, style3\")));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (StyleSelector);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Overview/Features/StyleSelector/index.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Overview/index.tsx":
+/*!**************************************************!*\
+  !*** ./client/src/components/Overview/index.tsx ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Features_ProductInfo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Features/ProductInfo */ \"./client/src/components/Overview/Features/ProductInfo/index.tsx\");\n\n\nfunction Overview() {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Features_ProductInfo__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Overview);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Overview/index.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/QuestionsAndAnswers.tsx":
+/*!*******************************************************!*\
+  !*** ./client/src/components/QuestionsAndAnswers.tsx ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _QuestionsAndAnswers_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./QuestionsAndAnswers.css */ \"./client/src/components/QuestionsAndAnswers.css\");\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module './Questions-Answers/Search'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\n\n\nfunction QuestionsAndAnswers() {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", { className: \"q-and-a-container\" },\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"QUESTIONS & ANSWERS\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Object(function webpackMissingModule() { var e = new Error(\"Cannot find module './Questions-Answers/Search'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), null),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"QUESTIONS AND ANSWERS COMPONENT\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"EXPAND QUESTIONS / ADD QUESTIONS COMPONENT\")));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (QuestionsAndAnswers);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/QuestionsAndAnswers.tsx?");
+>>>>>>> 74c01e7 (Build functional review stars)
 
 /***/ }),
 
