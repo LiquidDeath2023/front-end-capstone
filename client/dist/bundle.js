@@ -206,7 +206,62 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+<<<<<<< HEAD
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.css */ \"./client/src/app.css\");\n/* harmony import */ var _components_QuestionsAndAnswers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/QuestionsAndAnswers */ \"./client/src/components/QuestionsAndAnswers.tsx\");\n/* harmony import */ var _components_Related_Cards__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Related/Cards */ \"./client/src/components/Related/Cards.tsx\");\n\n\n\n\n// nothing special here\nfunction App() {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null,\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, \"Ben Component\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, \"Kurt Component\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_QuestionsAndAnswers__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Related_Cards__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/App.tsx?");
+=======
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.css */ \"./client/src/app.css\");\n/* harmony import */ var _components_QuestionsAndAnswers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/QuestionsAndAnswers */ \"./client/src/components/QuestionsAndAnswers.tsx\");\n\n\n\n// nothing special here\nfunction App() {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null,\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, \"Ben Component\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, \"Kurt Component\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_QuestionsAndAnswers__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, \"Jon Component\")));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/App.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Questions-Answers/Answer.tsx":
+/*!************************************************************!*\
+  !*** ./client/src/components/Questions-Answers/Answer.tsx ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction Answer(props) {\n    const { answer } = props;\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null,\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", { className: \"A-container\" }, `A: ${answer}`),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, 'by <username>, <data> | Helpful? Yes(#) | Report')));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Answer);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Questions-Answers/Answer.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Questions-Answers/ExpandAndAdd.tsx":
+/*!******************************************************************!*\
+  !*** ./client/src/components/Questions-Answers/ExpandAndAdd.tsx ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction ExpandAndAdd() {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", { className: \"ExpandAndAdd-container\" },\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", { type: \"button\" }, \"MORE ANSWERED QUESTIONS\"),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", { type: \"button\" }, \"ADD A QUESTION +\")));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ExpandAndAdd);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Questions-Answers/ExpandAndAdd.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Questions-Answers/QandA.tsx":
+/*!***********************************************************!*\
+  !*** ./client/src/components/Questions-Answers/QandA.tsx ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Question__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Question */ \"./client/src/components/Questions-Answers/Question.tsx\");\n\n\nfunction QandA() {\n    const fakeQuestions = ['Fake Question 1', 'Fake Question 2'];\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", { className: \"QandA-container\" }, fakeQuestions.map((fakeQuestion) => (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Question__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { question: fakeQuestion, key: fakeQuestion })))));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (QandA);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Questions-Answers/QandA.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Questions-Answers/Question.tsx":
+/*!**************************************************************!*\
+  !*** ./client/src/components/Questions-Answers/Question.tsx ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Answer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Answer */ \"./client/src/components/Questions-Answers/Answer.tsx\");\n\n\nfunction Question(props) {\n    const { question } = props;\n    const fakeAnswers = ['Fake Answer A', 'Fake Answer B'];\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", { className: \"Q-container\" },\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", { className: \"Q-liner\" },\n            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, `Q: ${question}`),\n            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, 'Helpful? Yes(#) | <Add Answer>')),\n        fakeAnswers.map((fakeAnswer) => react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Answer__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { answer: fakeAnswer, key: fakeAnswer })),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"LOAD MORE ANSWERS\")));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Question);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Questions-Answers/Question.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/Questions-Answers/Search.tsx":
+/*!************************************************************!*\
+  !*** ./client/src/components/Questions-Answers/Search.tsx ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction Search() {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", { className: \"search-container\" },\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"input\", { type: \"text\", placeholder: \"HAVE A QUESTION? SEARCH FOR ANSWERS?\" }),\n        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"i\", { className: \"fa-solid fa-magnifying-glass\" })));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Search);\n\n\n//# sourceURL=webpack://front-end-capstone/./client/src/components/Questions-Answers/Search.tsx?");
+>>>>>>> 0eeae3f (updated git ignore and bundle.js)
 
 /***/ }),
 
@@ -244,7 +299,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -258,17 +313,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -281,7 +336,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /******/ 			return getter;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -293,12 +348,12 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -309,7 +364,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nmd = (module) => {
@@ -318,18 +373,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /******/ 			return module;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
 /******/ 	})();
-/******/ 	
+/******/
 /************************************************************************/
-/******/ 	
+/******/
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = __webpack_require__("./client/src/index.tsx");
-/******/ 	
+/******/
 /******/ })()
 ;

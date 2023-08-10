@@ -1,8 +1,12 @@
 node_modules
 exampleData
 <<<<<<< HEAD
+<<<<<<< HEAD
 configs
 =======
+=======
+bundle.js
+>>>>>>> 0eeae3f (updated git ignore and bundle.js)
 .eslintrc.json
 .prettierrc.json
 bundle.js
