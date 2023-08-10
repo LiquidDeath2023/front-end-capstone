@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import './ReviewsRatings.css';
 import ReviewList from './ReviewsList';
 import RatingBreakdown from './RatingBreakdown';
