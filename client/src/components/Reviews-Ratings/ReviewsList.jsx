@@ -14,7 +14,6 @@ function ReviewsList({ getReviewsData }) {
   const handleClick = () => {
     const prevLength = listLength;
     setListLength(prevLength + 2);
-    console.log('click');
   };
 
   if (getReviewsData.results.length > 2) {

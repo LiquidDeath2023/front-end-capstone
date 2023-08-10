@@ -7,20 +7,20 @@ module.exports = {
       {
         review_id: 5,
         rating: 3,
-        summary: 'Im enjoying wearing these shades',
+        summary: 'Im enjoying wearing these shades but if it is over 60 characters then I have to truncate it so that it does not mess up',
         recommend: false,
         response: null,
-        body: 'Comfortable and practical.',
+        body: 'Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical.',
         date: '2019-04-14T00:00:00.000Z',
         reviewer_name: 'shortandsweeet',
         helpfulness: 5,
         photos: [{
           id: 1,
-          url: 'urlplaceholder/review_5_photo_number_1.jpg',
+          url: 'https://www.creativefabrica.com/wp-content/uploads/2020/04/21/Tshirt-icon-black-thin-stripe-2-Graphics-3920769-1-580x386.jpg',
         },
         {
           id: 2,
-          url: 'urlplaceholder/review_5_photo_number_2.jpg',
+          url: 'https://www.creativefabrica.com/wp-content/uploads/2020/04/21/Tshirt-icon-black-thin-stripe-2-Graphics-3920769-1-580x386.jpg',
         },
         // ...
         ],
