@@ -16,11 +16,11 @@ module.exports = {
         helpfulness: 5,
         photos: [{
           id: 1,
-          url: 'urlplaceholder/review_5_photo_number_1.jpg'
+          url: 'urlplaceholder/review_5_photo_number_1.jpg',
         },
         {
           id: 2,
-          url: 'urlplaceholder/review_5_photo_number_2.jpg'
+          url: 'urlplaceholder/review_5_photo_number_2.jpg',
         },
         // ...
         ],
