@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-function StarsAndReviews({reviews}) {
+function StarsAndReviews({ reviews }) {
   // finds average of reviews
   function reviewAvg() {
     let total = 0;
@@ -19,7 +19,9 @@ function StarsAndReviews({reviews}) {
         stars.push(<i className="star fa-regular fa-star" />);
       } else if (i - Math.floor(num) < 1) {
         const percent = (num - Math.floor(num)) * 100;
-        stars.push(<i className="star fa-regular fa-star" style={{ width: percent }} />);
+        stars.push(
+          <i className="star fa-regular fa-star" style={{ width: percent }} />
+        );
       } else {
         stars.push(<i className="empty-star fa-regular fa-star" />);
       }
@@ -28,9 +30,7 @@ function StarsAndReviews({reviews}) {
   };
   return (
     <div>
-      <div className="star-container">
-        {reviewStars(reviewAvg())}
-      </div>
+      <div className="star-container">{reviewStars(reviewAvg())}</div>
       <h4>Read all reviews</h4>
     </div>
   );
