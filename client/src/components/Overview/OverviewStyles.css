@@ -2,6 +2,18 @@
   background-color: rgba(61, 171, 239, 0.2);
 }
 
+.stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty-star {
+  display: inline-block;
+  position: relative;
+  font-size: 100px;
+  color: #ddd;
+}
+
 .star {
   display: inline-block;
   position: relative;
@@ -19,3 +31,17 @@
   overflow: hidden;
   color: #f80;
 }
+
+.empty-star:after {
+  font-family: FontAwesome;
+  content: "\f005";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  overflow: hidden;
+  color: #f80;
+}
+
+
+
