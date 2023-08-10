@@ -16,3 +16,56 @@
 .moreReviewsButton {
 
 }
+
+.reviewTile {
+  border-style: groove;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(10px, auto);
+}
+
+.starRating {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.reviewDate {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.reviewSummary {
+  grid-column: 1 / 3;
+  grid-row: 2;
+
+}
+
+.reviewBody {
+  grid-column: 1 / 3;
+  grid-row: 3;
+
+}
+
+.reviewRec {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.reviewerName {
+  grid-column: 2;
+  grid-row: 4;
+
+}
+
+
+.reviewResponse {
+  grid-column: 1/3;
+  grid-row: 5;
+
+}
+
+.reviewHelpfulness {
+  grid-column: 1;
+  grid-row: 6;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import ReviewTile from './ReviewTile';
 
 function ReviewsList({ getReviewsData }) {
   let moreButton;
@@ -8,7 +9,7 @@ function ReviewsList({ getReviewsData }) {
   // const [toggleMoreButton, setToggleMoreButton] = useState(false);
 
   const reviewTile = getReviewsData.results.map((review) =>
-    <div key={review.review_id}>review.rating</div>).slice(0, listLength);
+    <div key={review.review_id}><ReviewTile /></div>).slice(0, listLength);
 
   const handleClick = () => {
     const prevLength = listLength;
