@@ -33,5 +33,5 @@ function ReviewsList({ getReviewsData }) {
     </div>
   );
 }
-
+// test comment
 export default ReviewsList;
