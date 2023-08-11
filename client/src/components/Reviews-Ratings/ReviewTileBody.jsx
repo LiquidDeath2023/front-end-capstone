@@ -1,36 +1,41 @@
 import React from 'react';
-import {useState} from 'react';
+import { useState } from 'react';
 
 function ReviewTileBody({review}) {
-  const [expandBody, setExpandBody] = useState(review.body.length > 250);
+  const reviewLen = review.body.length;
+  const [expandBody, setExpandBody] = useState(reviewLen > 250);
+  const [buttonText, setButtonText] = useState('Show More');
 
   const helpExpandBody = () => {
-    console.log('expanding text...');
+    if (buttonText === 'Show More') {
+      setButtonText('Show Less');
+    } else {
+      setButtonText('Show More');
+    }
     setExpandBody(!expandBody);
   };
 
   const renderBodyText = () => {
     if (expandBody) {
-      return (
-        <div>
-          <div>{review.body.slice(0, review.body.length - 3) + "..."}</div>
-          <button onClick={helpExpandBody} type="button">Show More</button>
-        </div>
-      );
+      return review.body.slice(0, 247) + "...";
     }
-    return (
-      <div>{review.body}</div>
-    );
+    return review.body;
   };
 
-  const renderPhotos = () => {
-    return review.photos.map((photo) => <img className="reviewPhotos" src={photo.url}/>);
+  const showMoreButton = () => {
+    if (reviewLen > 250) {
+      return <button className="expandReviewTextButton" onClick={helpExpandBody} type="button">{buttonText}</button>;
+    }
+    return <div></div>;
   };
+
+  const renderPhotos = () => review.photos.map((photo) => <img className="reviewPhotos" src={photo.url}/>);
 
   return (
     <div className="reviewBody">
       <div className="reviewBodyText">{renderBodyText()}</div>
-      {/* {renderPhotos()} */}
+      {showMoreButton()}
+      {renderPhotos()}
     </div>
   );
 }

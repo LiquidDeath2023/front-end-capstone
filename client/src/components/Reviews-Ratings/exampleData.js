@@ -10,7 +10,7 @@ module.exports = {
         summary: 'Im enjoying wearing these shades but if it is over 60 characters then I have to truncate it so that it does not mess up',
         recommend: false,
         response: null,
-        body: 'Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical. Comfortable and practical.',
+        body: 'In the realm of technology, innovation shapes our world, driving progress and transforming lives. From artificial intelligence to renewable energy, each breakthrough amplifies our potential and paves the way for a future defined by limitless possibilities.',
         date: '2019-04-14T00:00:00.000Z',
         reviewer_name: 'shortandsweeet',
         helpfulness: 5,

@@ -26,7 +26,7 @@ function ReviewTile({review}) {
 
   const reviewSummary = () => {
     if (review.summary.length > 60) {
-      return review.summary.slice(0, review.summary.length - 3) + "...";
+      return review.summary.slice(0, 57) + "...";
     }
     return review.summary;
   };
