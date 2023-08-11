@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable import/no-unresolved */
+=======
+>>>>>>> 5b3a492 (tailwind)
 import React from "react";
 import "./app.css";
 import QuestionsAndAnswers from "./components/QuestionsAndAnswers";
