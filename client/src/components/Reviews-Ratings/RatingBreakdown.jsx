@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import BreakdownComp from './BreakdownComp';
+import ProductBreakdown from './ProductBreakdown';
 
 import { getReviewsMeta } from './exampleData.js'; // putting this here to until master updated with prev changes
 
@@ -28,7 +29,7 @@ function RatingBreakdown({filters, updateFilters}) {
       <h2>Rating Breakdown</h2>
       <div>{calcAvgRating(getReviewsMeta.ratings)} ⭐⭐⭐⭐</div>
       <BreakdownComp filters={filters} updateFilters={updateFilters} />
-      <div>Product Breakdown</div>
+      <ProductBreakdown getReviewsMeta={getReviewsMeta} />
     </div>
   );
 }

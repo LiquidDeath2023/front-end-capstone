@@ -109,3 +109,44 @@
 #breakdownBar {
 
 }
+
+.productBreakdown {
+  margin-bottom: 2px;
+  width: 200px;
+}
+
+.productBreakdownPointer {
+  width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #555;
+  left-margin:
+}
+
+.productBreakdownScale {
+  margin-top: 2px;
+  height: 5px;
+  width: 200px;
+  background-color: #c1baba;
+}
+
+.productBreakdownLabels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.8em;
+}
+
+.productBreakdownLabelsLow {
+  margin-left: 0;
+
+}
+
+/* .productBreakdownLabelsMed {
+  margin: auto;
+} */
+
+.productBreakdownLabelsHigh {
+  margin-right: 0;
+}
