@@ -1,17 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './QuestionsAndAnswers.css';
+import ExpandAndAdd from './Questions-Answers/ExpandAndAdd';
 import QuestionList from './Questions-Answers/QuestionList';
 
 function QuestionsAndAnswers() {
   const [questionsDatabase, setQuestionsDatabase] = useState([]);
+  const [numOfQuestions, setNumOfQuestions] = useState([]);
   const [questions, setQuestions] = useState([]);
 
   const realQuestionsFetcher = () => {
     axios.get('/qa/questions')
       .then((res) => {
-        setQuestionsDatabase(res.data.results); // this will be used to filter
-        setQuestions(res.data.results); // this will be what it displayed
+        const triple = res.data.results;
+        // const triple = res.data.results
+        //   .concat(res.data.results)
+        //   .concat(res.data.results);
+
+        setQuestionsDatabase(triple);
+        setNumOfQuestions([4, triple.length]);
+        setQuestions(triple.slice(0, 4));
       })
       .catch(() => console.log('err obtaining questions'));
   };
@@ -20,14 +28,20 @@ function QuestionsAndAnswers() {
     realQuestionsFetcher();
   }, []);
 
+  useEffect(() => {
+    setQuestions(questionsDatabase.slice(0, numOfQuestions[0]));
+  }, [numOfQuestions]);
+
   return (
     <div className="qa-main-container">
       <div>QUESTIONS & ANSWERS</div>
       <div>SEARCH COMPONENT HIDDEN</div>
       {/* <Search filterQs={filterQs} /> */}
       <QuestionList questions={questions} />
-      {/* <ExpandAndAdd add2={add2} collapse={collapse} loadQuestions={loadQuestions} /> */}
-      <div>EXPAND AND ADD COMPONENT HIDDEN</div>
+      <ExpandAndAdd
+        numOfQuestions={numOfQuestions}
+        setNumOfQuestions={setNumOfQuestions}
+      />
     </div>
   );
 }
@@ -37,23 +51,6 @@ export default QuestionsAndAnswers;
 // IGNORANCE IS BLISS
 
 // import Search from './Questions-Answers/Search';
-// import ExpandAndAdd from './Questions-Answers/ExpandAndAdd';
-// import utils from './Questions-Answers/Helpers/helpers';
-
-// const [numOfQuestions, setNumOfQuestions] = useState(4);
-// const [loadQuestions, setLoadQuestions] = React.useState(true);
-
-  // const add2 = () => {
-  //   setNumOfQuestions(numOfQuestions + 2);
-  //   if (numOfQuestions + 2 >= A) {
-  //     setLoadQuestions(false);
-  //   }
-  // };
-
-  // const collapse = () => {
-  //   setNumOfQuestions(4);
-  //   setLoadQuestions(true);
-  // };
 
   // const filterQs = (query) => {
   //   // only checks question edit for answers later

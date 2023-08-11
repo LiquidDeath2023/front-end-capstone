@@ -1,17 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
+import utils from './Helpers/helpers';
 
-function ExpandAndAdd({ add2, collapse, loadQuestions }) {
+// currently all expanding / collapse behavior pulls from local database
+function ExpandAndAdd({ numOfQuestions, setNumOfQuestions }) {
+  const [more, setMore] = useState(true);
+
   const addQuestionModule = () => {
-    alert('ADD QUESTION FORM HERE');
+    console.log('ADD QUESTION FORM HERE');
+  };
+
+  const expandOrCollapse = () => {
+    if (more) {
+      setMore(!utils.expand(numOfQuestions, setNumOfQuestions));
+    } else {
+      setMore(utils.collapse(setNumOfQuestions, 4))
+    }
+  };
+
+  const expandOrCollapseButtons = () => {
+    if (numOfQuestions[1] > 4) {
+      if (more) {
+        return <button type="button" onClick={expandOrCollapse}>MORE ANSWERED QUESTIONS</button>;
+      }
+      return <button type="button" onClick={expandOrCollapse}>COLLAPSE QUESTIONS</button>;
+    }
   };
 
   return (
     <div className="ExpandAndAdd-container">
       {
-        loadQuestions && <button type="button" onClick={() => add2()}>MORE ANSWERED QUESTIONS</button>
-      }
-      {
-        !loadQuestions && <button type="button" onClick={() => collapse()}>COLLAPSE QUESTIONS</button>
+        expandOrCollapseButtons()
       }
       <button type="button" onClick={() => addQuestionModule()}>ADD A QUESTION +</button>
     </div>

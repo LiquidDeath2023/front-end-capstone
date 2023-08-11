@@ -5,7 +5,8 @@ function QuestionList({ questions }) {
   return (
     <div>
       {
-        questions.map((question) => (<Question question={question} key={question.question_id} />))
+        // remove index later
+        questions.map((question, index) => (<Question question={question} key={index} />))
       }
     </div>
   );
