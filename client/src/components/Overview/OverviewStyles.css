@@ -1,5 +1,36 @@
 .overview-container {
   background-color: rgba(61, 171, 239, 0.2);
+  position:relative;
+}
+
+.image-gallery-container {
+  display: inline-flex;
+  position:relative;
+  left:0;
+  height: 50vh;
+  width: 60vw;
+}
+
+.default-image-container {
+  overflow:hidden;
+  background-color:#000000;
+  position:relative;
+  height: 100%;
+  width: 100%;
+}
+
+img.default-image {
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
+.product-info-container {
+  display: inline-block;
+  position: absolute;
+  right:0;
+  height: 50vh;
+  width: 38vw;
 }
 
 html {
@@ -14,10 +45,22 @@ html {
 }
 
 .reviews {
-  display: inline;
+  display: inline-flex;
 }
 
-.star-container {
+.review-scroll {
+  color:#000000;
+}
+
+.review-scroll:visited {
+  color:#000000
+}
+
+.review-scroll:hover {
+  color:#686464;
+}
+
+.stars-container {
   display: flex;
   justify-content: space-evenly;
   padding-right: 5px;

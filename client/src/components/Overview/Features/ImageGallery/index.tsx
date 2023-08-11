@@ -1,9 +1,10 @@
 import React from 'react';
+import Image from './Subcomponents/Image';
 
-function ImageGallery() {
+function ImageGallery({styles}) {
   return (
-    <div>
-      <h4>Big picture with little pictures</h4>
+    <div className="image-gallery-container">
+      <Image styles={styles} />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Sharing from './Subcomponents/Sharing';
 
 function ProductInfo({product, reviews}) {
   return (
-    <div>
+    <div className="product-info-container">
       <StarsAndReviews reviews={reviews} />
       <ProductIdentifiers product={product} />
       <Sharing />
