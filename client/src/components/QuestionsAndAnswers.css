@@ -36,31 +36,25 @@
   justify-content: space-between;
 }
 
-#question-yes {
+#question-yes, #add-answer-btn, #answer-yes, #report-btn {
   background:none;
   border:none;
   margin:0;
   padding:0;
   cursor: pointer;
   font-size: 20px;
+}
+
+#question-yes, #answer-yes {
   text-decoration: underline;
 }
 
-#question-yes:hover {
-  background-color: yellow;
+#question-yes:hover, #add-answer-btn:hover, #answer-yes:hover  {
+  color: yellow;
 }
 
 /* ANSWER CONTAINER */
 .answer-container {
   background-color: palegreen;
   margin: 5px 0;
-}
-
-#answer-yes {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-#answer-yes:hover {
-  background-color: yellow;
 }

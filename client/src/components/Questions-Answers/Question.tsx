@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Answer from './Answer';
 import myData from './Helpers/fakeData';
 import utils from './Helpers/helpers';
@@ -10,7 +10,7 @@ function Question(props) {
   const [numOfAns, setNumOfAns] = React.useState(2);
   const [loadAns, setLoadAns] = React.useState(true);
   const [fakeAnswers, setFakeAnswers] = React.useState([]);
-  const [helpfulness, setHelpfulness] = React.useState([question.question_helpfulness, false]);
+  const [helpfulness, setHelpfulness] = useState([question.question_helpfulness, false]);
 
   React.useEffect(() => {
     setFakeAnswers(myFakeAnswers.slice(0, numOfAns));
@@ -29,10 +29,16 @@ function Question(props) {
   };
 
   const addHelpfulness = () => {
-    if (helpfulness[1] === false) {
+    if (!helpfulness[1]) {
       setHelpfulness([helpfulness[0] + 1, true]);
     }
   };
+
+  const addAnswerModule = () => {
+    alert('ADD QUESTION FORM HERE');
+  };
+
+
   return (
     <div className="question-container">
       <div className="question-title-container">
@@ -43,7 +49,7 @@ function Question(props) {
           {'Helpful? '}
           <button type="button" id="question-yes" onClick={() => addHelpfulness()} onKeyDown={() => addHelpfulness()}>Yes</button>
           {` (${helpfulness[0]}) | `}
-          [ADD ANSWER]
+          <button type="button" id="add-answer-btn" onClick={() => addAnswerModule()} onKeyDown={() => addAnswerModule()}>Add Answer</button>
         </div>
       </div>
       {
