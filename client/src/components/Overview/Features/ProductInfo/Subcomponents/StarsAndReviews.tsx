@@ -13,9 +13,7 @@ function StarsAndReviews({reviews}) {
   // "rounding", using 0.65 and 0.35 for more noticeable impact
   function quarterRound(num) {
     let quarters;
-    if (num > 0.875) {
-      quarters = 1;
-    } else if (num > 0.625) {
+    if (num > 0.625) {
       quarters = 0.65;
     } else if (num > 0.375) {
       quarters = 0.5;
@@ -38,7 +36,6 @@ function StarsAndReviews({reviews}) {
         stars.push(<i className="empty-star fa-regular fa-star" />);
       }
     }
-    // needed separate containers to get proper spacing and account for partial star width
     return (
       <div className="stars">{stars}</div>
     );
@@ -48,7 +45,7 @@ function StarsAndReviews({reviews}) {
       <div className="star-container">
         {reviewStars(reviewAvg())}
       </div>
-      <span className="reviews scroll">
+      <span className="reviews">
         <a href="#ratingsReviewsContainerId">Read all reviews</a>
       </span>
     </div>

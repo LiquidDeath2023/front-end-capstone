@@ -64,4 +64,19 @@ html {
 .media {
   display: flex;
   justify-content: space-evenly;
+  width: 18vw;
+  margin:auto;
 }
+
+.fa-facebook {
+  color:#3b5998;
+}
+
+.fa-x-twitter {
+  color:#000000;
+}
+
+.fa-pinterest {
+  color:#E60023;
+}
+
