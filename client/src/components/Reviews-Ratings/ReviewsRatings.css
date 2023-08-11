@@ -106,6 +106,10 @@
   cursor: pointer;
 }
 
+#breakdownLabel:hover {
+  background-color:rgb(213, 193, 233);
+}
+
 #breakdownBar {
 
 }
@@ -115,14 +119,14 @@
   width: 200px;
 }
 
-.productBreakdownPointer {
+/* .productBreakdownPointer {
   width: 0;
 	height: 0;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	border-top: 10px solid #555;
   left-margin:
-}
+} */
 
 .productBreakdownScale {
   margin-top: 2px;
