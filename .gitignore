@@ -7,5 +7,9 @@ configs
 .prettierrc.json
 bundle.js
 configs
+<<<<<<< HEAD
 
 >>>>>>> 5b3a492 (tailwind)
+=======
+dist
+>>>>>>> 28e4419 ( have no idea)
