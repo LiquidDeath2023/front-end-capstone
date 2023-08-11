@@ -1,9 +1,7 @@
 import React from 'react';
 import Question from './Question';
 
-function QandA(props) {
-  const { fakeData } = props;
-
+function QandA({ fakeData }) {
   return (
     <div>
       {
