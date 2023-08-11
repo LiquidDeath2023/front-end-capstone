@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .ratingsReviewsContainer {
   border-style: solid;
   background-color: rgba(15, 149, 80, 0.1);
@@ -82,4 +83,8 @@
 .reviewHelpfulness {
   grid-column: 1;
   grid-row: 6;
+=======
+.ratingsreviews-container {
+  background-color: rgba(15, 149, 80, 0.1);
+>>>>>>> 5b95a2a (test - added ReviewsRatings component to app)
 }
