@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import './QuestionsAndAnswers.css'
 
@@ -17,14 +18,39 @@ import React from 'react';
 =======
 import React, { useState } from 'react';
 >>>>>>> 5f70872 (added fake data modeling from api)
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> a4ddec7 (completed clickables)
 import './QuestionsAndAnswers.css';
 // import Search from './Questions-Answers/Search';
 import QandA from './Questions-Answers/QandA';
-// import ExpandAndAdd from './Questions-Answers/ExpandAndAdd';
+import ExpandAndAdd from './Questions-Answers/ExpandAndAdd';
 import myData from './Questions-Answers/Helpers/fakeData';
+import utils from './Questions-Answers/Helpers/helpers';
+
+const listOfQuestions = myData.fakeData.results.sort(utils.compare('question_helpfulness'));
+const A = listOfQuestions.length;
 
 function QuestionsAndAnswers() {
-  const [fakeData, setFakeData] = useState(myData.fakeData);
+  const [numOfQuestions, setNumOfQuestions] = useState(4);
+  const [loadQuestions, setLoadQuestions] = React.useState(true);
+  const [fakeData, setFakeData] = useState([]);
+
+  useEffect(() => {
+    setFakeData(listOfQuestions.slice(0, numOfQuestions));
+  }, [numOfQuestions]);
+  console.log(listOfQuestions);
+  const add2 = () => {
+    setNumOfQuestions(numOfQuestions + 2);
+    if (numOfQuestions + 2 >= A) {
+      setLoadQuestions(false);
+    }
+  };
+
+  const collapse = () => {
+    setNumOfQuestions(4);
+    setLoadQuestions(true);
+  };
 
   return (
     <div className="qa-main-container">
@@ -32,8 +58,8 @@ function QuestionsAndAnswers() {
       <div>SEARCH COMPONENT HIDDEN</div>
       {/* <Search /> */}
       <QandA fakeData={fakeData} />
-      {/* <ExpandAndAdd /> */}
-      <div>EXPAND AND ADD COMPONENT HIDDEN</div>
+      <ExpandAndAdd add2={add2} collapse={collapse} loadQuestions={loadQuestions} />
+      {/* <div>EXPAND AND ADD COMPONENT HIDDEN</div> */}
     </div>
   );
 >>>>>>> origin/master

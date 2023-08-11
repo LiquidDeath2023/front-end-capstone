@@ -1,13 +1,14 @@
 // here lies the helpers
 
-const compare = (a, b) => {
-  if (a.helpfulness < b.helpfulness) {
-    return 1;
-  }
-  if (a.helpfulness > b.helpfulness) {
-    return -1;
-  }
-  return 0;
+const compare = (identifier) => {
+  return (a, b) => {
+    if (a[identifier] < b[identifier]) {
+      return 1;
+    }
+    if (a[identifier] > b[identifier]) {
+      return -1;
+    }
+    return 0;
+  };
 };
-
 export default { compare };
