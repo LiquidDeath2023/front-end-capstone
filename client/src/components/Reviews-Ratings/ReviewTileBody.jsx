@@ -6,6 +6,7 @@ function ReviewTileBody({review}) {
   const [expandBody, setExpandBody] = useState(reviewLen > 250);
   const [buttonText, setButtonText] = useState('Show More');
 
+  // expand body of review with button, utilizes expandBody state
   const helpExpandBody = () => {
     if (buttonText === 'Show More') {
       setButtonText('Show Less');
@@ -15,6 +16,7 @@ function ReviewTileBody({review}) {
     setExpandBody(!expandBody);
   };
 
+  // if body > 250 characters, truncate it
   const renderBodyText = () => {
     if (expandBody) {
       return review.body.slice(0, 247) + "...";
@@ -22,6 +24,7 @@ function ReviewTileBody({review}) {
     return review.body;
   };
 
+  // render showMoreButton only if body has to be truncated
   const showMoreButton = () => {
     if (reviewLen > 250) {
       return <button className="expandReviewTextButton" onClick={helpExpandBody} type="button">{buttonText}</button>;
@@ -29,6 +32,7 @@ function ReviewTileBody({review}) {
     return <div></div>;
   };
 
+  // map photos into review body. will add onto this at later time
   const renderPhotos = () => review.photos.map((photo) => <img className="reviewPhotos" src={photo.url}/>);
 
   return (

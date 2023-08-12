@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function Search({ filterQs }) {
-  const [query, setQuery] = React.useState('');
+function Search({ filterQuestions }) {
+  const [query, setQuery] = useState('');
 
   React.useEffect(() => {
-    filterQs(query);
+    filterQuestions(query);
   }, [query]);
 
   const setSearch = (event) => {
-    setQuery(event.target.value);
+    setQuery(event.target.value)
   };
 
   return (
@@ -18,5 +18,5 @@ function Search({ filterQs }) {
     </div>
   );
 }
-
+// remove later
 export default Search;

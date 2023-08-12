@@ -4,12 +4,14 @@ import './app.css';
 import QuestionsAndAnswers from './components/QuestionsAndAnswers';
 import Overview from './components/Overview';
 import ReviewsRatings from './components/Reviews-Ratings/ReviewsRatings';
+
 function App() {
   return (
     <div>
       <Overview />
-      <Card/>
-      <ReviewsRatings />
+      <div id="ratingsReviewsContainerId">
+        <ReviewsRatings />
+      </div>
       <QuestionsAndAnswers />
     </div>
   );

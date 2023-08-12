@@ -1,4 +1,7 @@
-import React from 'react';
+// THIS IS THE TOP COMPONENT FOR ALL REVIEWS AND RATINGS SECTION
+
+import React, { useState } from 'react';
+// import { useState } from 'react';
 import './ReviewsRatings.css';
 import ReviewList from './ReviewsList';
 import RatingBreakdown from './RatingBreakdown';
@@ -6,12 +9,16 @@ import RatingBreakdown from './RatingBreakdown';
 import { getReviewsData, getReviewsMeta } from './exampleData.js';
 
 function ReviewsRatings() {
-  // console.log({getReviewsData: getReviewsData, getReviewsMeta: getReviewsMeta});
+  const [filters, setFilters] = useState({ ratings: [] });
+
+  const updateFilters = (obj) => {
+    setFilters(obj);
+  };
+
   return (
-    <div className="ratingsreviews-container">
-      <ReviewList getReviewsData={getReviewsData} />
-      {/* <div>Hello World?</div> */}
-      {/* <RatingBreakdown /> */}
+    <div className="ratingsReviewsContainer" id="ratingsReviewsContainerId">
+      <ReviewList getReviewsData={getReviewsData} filters={filters} />
+      <RatingBreakdown filters={filters} updateFilters={updateFilters} />
     </div>
   );
 }

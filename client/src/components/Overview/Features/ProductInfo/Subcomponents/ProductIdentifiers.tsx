@@ -1,12 +1,33 @@
 import React from 'react';
 
-function ProductIdentifiers() {
+function ProductIdentifiers({product, styles}) {
+  function priceChecker(currentStyle) {
+    if (currentStyle.sale_price === null) {
+      return (
+        <p className="price">
+          $
+          {currentStyle.original_price}
+        </p>
+      );
+    }
+    return (
+      <p className="price">
+        <span className="original-price">
+          $
+          {currentStyle.original_price}
+        </span>
+        $
+        {currentStyle.sale_price}
+      </p>
+    );
+  }
   return (
     <div>
-      <h4>Elixirs</h4>
-      <h2>Liquid Death Vinyl</h2>
-      <p>$799.99</p>
-      <h4>Description and Slogan</h4>
+      <h4>{product.category}</h4>
+      <h2>{product.name}</h2>
+      {priceChecker(styles[7])}
+      <h4>{product.slogan}</h4>
+      <p>{product.description}</p>
     </div>
   );
 }

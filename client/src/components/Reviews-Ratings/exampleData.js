@@ -1,40 +1,39 @@
 module.exports = {
   getReviewsData: {
-    product: "2",
+    product: '2',
     page: 0,
     count: 5,
     results: [
       {
         review_id: 5,
         rating: 3,
-        summary: "Im enjoying wearing these shades",
-        recommend: false,
-        response: null,
-        body: "Comfortable and practical.",
-        date: "2019-04-14T00:00:00.000Z",
-        reviewer_name: "shortandsweeet",
+        summary: 'Im enjoying wearing these shades but if it is over 60 characters then I have to truncate it so that it does not mess up and should not render the whole text unless it is under 60 characters but lets see. surely this is atleast 60 by now.',
+        recommend: true,
+        response: 'This review is literal nonsense.',
+        body: 'In the realm of technology, innovation shapes our world, driving progress and transforming lives. From artificial intelligence to renewable energy, each breakthrough amplifies our potential and paves the way for a future defined by limitless possibilities.',
+        date: '2019-04-14T00:00:00.000Z',
+        reviewer_name: 'shortandsweeet',
         helpfulness: 5,
-        photos: [
-          {
-            id: 1,
-            url: "urlplaceholder/review_5_photo_number_1.jpg",
-          },
-          {
-            id: 2,
-            url: "urlplaceholder/review_5_photo_number_2.jpg",
-          },
-          // ...
+        photos: [{
+          id: 1,
+          url: 'https://www.creativefabrica.com/wp-content/uploads/2020/04/21/Tshirt-icon-black-thin-stripe-2-Graphics-3920769-1-580x386.jpg',
+        },
+        {
+          id: 2,
+          url: 'https://www.creativefabrica.com/wp-content/uploads/2020/04/21/Tshirt-icon-black-thin-stripe-2-Graphics-3920769-1-580x386.jpg',
+        },
+        // ...
         ],
       },
       {
         review_id: 3,
         rating: 4,
-        summary: "I am liking these glasses",
+        summary: 'I am liking these glasses',
         recommend: false,
-        response: "Glad youre enjoying the product!",
-        body: "They are very dark. But thats good because Im in very sunny spots",
-        date: "2019-06-23T00:00:00.000Z",
-        reviewer_name: "bigbrotherbenjamin",
+        response: 'Glad youre enjoying the product!',
+        body: 'They are very dark. But thats good because Im in very sunny spots',
+        date: '2019-06-23T00:00:00.000Z',
+        reviewer_name: 'bigbrotherbenjamin',
         helpfulness: 5,
         photos: [],
       },
@@ -91,13 +90,13 @@ module.exports = {
         reviewer_name: 'Audiophile27',
         helpfulness: 6,
         photos: [],
-      }
+      },
       // ...
     ],
   },
 
   getReviewsMeta: {
-    product_id: "2",
+    product_id: '2',
     ratings: {
       2: 1,
       3: 1,
@@ -111,15 +110,15 @@ module.exports = {
     characteristics: {
       Size: {
         id: 14,
-        value: "4.0000",
+        value: '4.0000',
       },
       Width: {
         id: 15,
-        value: "3.5000",
+        value: '3.5000',
       },
       Comfort: {
         id: 16,
-        value: "4.0000",
+        value: '4.0000',
       },
       // ...
     },

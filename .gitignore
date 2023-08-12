@@ -1,7 +1,9 @@
 node_modules
 exampleData
-configs
-bundle.js
+client/dist/bundle.js
 .eslintrc.json
 .prettierrc.json
-client/dists
+client/dist
+client/dist/bundle.js
+.env
+client/dist/bundle.js

@@ -1,12 +1,88 @@
 .overview-container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgba(61, 171, 239, 0.2);
+  position:relative;
+  justify-content: start;
+}
+
+.image-gallery-container {
+  display: inline-flex;
+  position:relative;
+  left:0;
+  height: 50vh;
+  width: 60vw;
+  margin-top: 1%;
+}
+
+.default-image-container {
+  overflow:hidden;
+  background-color:#000000;
+  position:relative;
+  height: 100%;
+  width: 100%;
+}
+
+img.default-image {
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
+.product-info-container {
+  display: inline-block;
+  position: absolute;
+  margin-left: 2%;
+  margin-top: 3%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.stars-reviews {
+  position:relative;
+  display:flex;
+  justify-content: start;
+  width: auto;
+}
+
+.reviews {
+  display: inline-flex;
+}
+
+.review-scroll {
+  color:#000000;
+}
+
+.review-scroll:visited {
+  color:#000000
+}
+
+.review-scroll:hover {
+  color:#686464;
+}
+
+.stars-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 5px;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty-star {
+  display: inline-block;
+  position: relative;
+  color: #0b0b30;
 }
 
 .star {
   display: inline-block;
   position: relative;
-  font-size: 100px;
-  color: #ddd;
+  color: #0b0b30;
 }
 
 .star:after {
@@ -17,5 +93,46 @@
   top: 0;
   width: 100%;
   overflow: hidden;
-  color: #f80;
+  color: rgb(12, 12, 54);
 }
+
+.empty-star:after {
+  font-family: FontAwesome;
+  content: "\f005";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  overflow: hidden;
+}
+
+.price {
+
+}
+
+.original-price {
+  text-decoration: line-through;
+  font-style: italic;
+  color:#E60023;
+  margin-right: 2%;
+}
+
+.media {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin:auto;
+}
+
+.fa-facebook {
+  color:#3b5998;
+}
+
+.fa-x-twitter {
+  color:#000000;
+}
+
+.fa-pinterest {
+  color:#E60023;
+}
+

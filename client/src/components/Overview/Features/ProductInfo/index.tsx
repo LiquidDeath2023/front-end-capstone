@@ -1,13 +1,13 @@
-import React from "react";
-import StarsAndReviews from "./Subcomponents/StarsAndReviews";
-import ProductIdentifiers from "./Subcomponents/ProductIdentifiers";
-import Sharing from "./Subcomponents/Sharing";
+import React from 'react';
+import StarsAndReviews from './Subcomponents/StarsAndReviews';
+import ProductIdentifiers from './Subcomponents/ProductIdentifiers';
+import Sharing from './Subcomponents/Sharing';
 
-function ProductInfo({ product, reviews }) {
+function ProductInfo({product, reviews, styles}) {
   return (
-    <div>
+    <div className="product-info-container">
       <StarsAndReviews reviews={reviews} />
-      <ProductIdentifiers product={product} />
+      <ProductIdentifiers product={product} styles={styles} />
       <Sharing />
     </div>
   );

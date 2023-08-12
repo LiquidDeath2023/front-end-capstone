@@ -1,35 +1,51 @@
 .qa-main-container {
-  border: 2px solid black;
+  font-family: 'Inconsolata', monospace;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 65vw;
+  margin: 0 auto;
   padding: 10px;
-  width: 75vw;
+  border: 2px solid black;
+  color: white;
+  background-color: #004675;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+.qa-main-container h2 {
+  margin: 5px 0;
 }
 
 .search-container {
-  background-color: rgba(255, 0, 0, 0.1);
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
 }
 
 .search-container input {
-  padding: 10px;
-  width: 95%;
-  height: 20px;
-  border: 2px solid green;
-  border-right: none;
+  height: 25px;
+  flex-grow: 2;
+  border: none;
 }
 
 .search-container i {
   background-color: white;
-  height: 20px;
-  padding: 10px;
-  border: 2px solid green;
+  color: black;
+  font-size: 25px;
 }
 
 /* QUESTION CONTAINER */
 .question-container {
-  background-color: palevioletred;
-  padding: 5px;
+  /* background-color: palevioletred; */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.question-container:last-child {
+  margin-bottom: 0px;
 }
 
 .question-title-container {
@@ -40,13 +56,16 @@
 #question-yes,
 #add-answer-btn,
 #answer-yes,
-#report-btn {
+#report-btn,
+.expand-answers-btn {
+  font-family: 'Inconsolata', monospace;
   background: none;
+  color: white;
   border: none;
   margin: 0;
   padding: 0;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #question-yes,
@@ -56,12 +75,36 @@
 
 #question-yes:hover,
 #add-answer-btn:hover,
-#answer-yes:hover {
+#answer-yes:hover,
+.expand-answers-btn:hover {
   color: yellow;
 }
 
 /* ANSWER CONTAINER */
 .answer-container {
-  background-color: palegreen;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
   margin: 5px 0;
+}
+
+.answer-container:last-child {
+  margin-bottom: 0;
+}
+
+.answer-body {
+  margin-bottom: 5px;
+}
+
+/* EXPAND AND COLLAPSE CONTAINER */
+.expand-questions-btn {
+  padding: 5px;
+  background-color: #004675;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.expand-questions-btn:hover {
+  background-color: rgba(255, 255, 0, 0.2);
 }
