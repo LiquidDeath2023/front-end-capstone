@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import ReviewTile from './ReviewTile';
 import Sorting from './Sorting';
+import NewReviewForm from './NewReviewForm';
 
 function ReviewsList({ filteredReviews, filters }) {
   // console.log('filteredReviews: ', filteredReviews);
   let moreButton;
   const [listLength, setListLength] = useState(2);
+  const [aForm, setAForm] = useState(false);
   const [sortedFilteredReviews, setSortedFilteredReviews] = useState(filteredReviews);
 
   // create this function to allow child components to update sortedFilteredReviews
@@ -20,7 +22,7 @@ function ReviewsList({ filteredReviews, filters }) {
 
   // renders 2 review tiles at a time using .slice and the listLength state
   const reviewTile = () => {
-    console.log('reviewTile is re-rendering');
+    // console.log('reviewTile is re-rendering');
     return sortedFilteredReviews.map((review) =>
     <div key={review.review_id}><ReviewTile review={review} /></div>).slice(0, listLength);
   };
@@ -38,13 +40,17 @@ function ReviewsList({ filteredReviews, filters }) {
     moreButton = <div></div>;
   }
 
+  const addReviewButton = () => <button type="button" id="add-answer-btn" onClick={() => setAForm(true)} >Add Review</button>
+
   return (
     <div className="reviewsList">
       <h2>Reviews List</h2>
+      <NewReviewForm setAForm={setAForm}/>
       <Sorting sortedFilteredReviews={sortedFilteredReviews} updateSetSortedFilteredReviews={updateSetSortedFilteredReviews} />
       {reviewTile()}
       {moreButton}
-      {/* <div>Add Review</div> */}
+      {addReviewButton()}
+      {/* { aForm ? (<NewReviewForm setAForm={setAForm}/>) : <div></div>} */}
     </div>
   );
 }
