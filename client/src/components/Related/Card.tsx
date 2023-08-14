@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { Links } from "./Links";
-import {product, data} from './List'
+import { product, data } from "./List";
 import Logo from "../../Death.jpg";
 
+type CardProps = {
+  data: data;
+  product: product;
+};
 
-export const Card: React.FC<{}>() => {
+export const Card: React.FC<CardProps> = ({ product, data }) => {
   return (
     <>
       <div className="container bg-white rounded-md flex flex-col">

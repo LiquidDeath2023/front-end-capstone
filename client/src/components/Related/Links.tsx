@@ -1,7 +1,10 @@
 import React from "react";
 import { product, data } from "./List";
-
-export const Links: React.FC<({product, data})> => (
+type LinkProps = {
+  product: product;
+  data: data;
+};
+export const Links: React.FC<LinkProps> = ({ product, data }) => (
   <div className="grow content-evenly text-center">
     <em>{product.name}</em>
     <div className="center-self">
