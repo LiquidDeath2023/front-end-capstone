@@ -56,6 +56,10 @@ function NewReviewForm({ setAForm, getReviewsMeta }) {
     })
   };
 
+  const renderPhotoPage = () => {
+    console.log('click');
+  };
+
   const checkKeyDown = (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
@@ -119,12 +123,11 @@ function NewReviewForm({ setAForm, getReviewsMeta }) {
           <textarea maxLength="100" name="summary" /> <br /></label>
         <label>Review Body <br />
           <textarea maxLength="1000" rows="5" name="body" /> <br /></label>
-        <label>Upload Photos - INCOMPLETE<br />
-          <textarea maxLength="1000" name="photos" /> <br /> </label>
         <label>Nickname<br />
           <input type="text" name="nickname" placeholder="happycustomer20" /><br /></label>
         <label >E-mail<br />
-          <input type="email" maxLength="60" placeholder="jack@email.com" name="email" required /></label>
+          <input type="email" maxLength="60" placeholder="jack@email.com" name="email" required /> <br /> </label>
+        <button onClick={renderPhotoPage}>Add Photos  </button><br />
         <input id="q-submit-btn" type="submit" />
       </form>
     </div>
