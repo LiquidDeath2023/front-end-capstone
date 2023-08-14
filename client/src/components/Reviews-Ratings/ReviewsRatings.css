@@ -1,6 +1,7 @@
 .ratingsReviewsContainer {
   border-style: solid;
   background-color: rgba(15, 149, 80, 0.1);
+  display: flex;
 }
 
 .reviewsList {
@@ -11,6 +12,7 @@
 
 .ratingBreakdown {
   border-style: solid;
+  justify-content: left;
 }
 
 .moreReviewsButton {
@@ -157,4 +159,49 @@
 
 .newReviewStarRating {
   display: flex;
+}
+
+.stars-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 5px;
+  max-width: 100rem;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty-star {
+  display: inline-block;
+  position: relative;
+  color: #0b0b30;
+}
+
+.star {
+  display: inline-block;
+  position: relative;
+  color: #0b0b30;
+}
+
+.star:after {
+  font-family: FontAwesome;
+  content: "\f005";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  color: rgb(12, 12, 54);
+}
+
+.empty-star:after {
+  font-family: FontAwesome;
+  content: "\f005";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  overflow: hidden;
 }

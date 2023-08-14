@@ -23,11 +23,11 @@ function NewReviewForm({ setAForm, getReviewsMeta }) {
     return [1, 2, 3, 4, 5].map((index, value) => {
       if (index <= rating) {
         return (
-          <div value={index} onClick={() => setRating(index)}>⭐</div>
+          <i key={index} className="star fa-regular fa-star" value={index} onClick={() => setRating(index)}/>
         )
       } else {
         return (
-          <div value={index} onClick={() => setRating(index)}>☆</div>
+          <i key={index} className="empty-star fa-regular fa-star" value={index} onClick={() => setRating(index)}/>
         )
       }
     })
