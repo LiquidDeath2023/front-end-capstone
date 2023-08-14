@@ -20,7 +20,7 @@ function ReviewsRatings() {
 
   return (
     <div className="ratingsReviewsContainer" id="ratingsReviewsContainerId">
-      <ReviewsList filteredReviews={filteredReviews} filters={filters} />
+      <ReviewsList filteredReviews={filteredReviews} filters={filters} getReviewsMeta={getReviewsMeta}/>
       {/* <RatingBreakdown filters={filters} updateFilters={updateFilters} /> */}
     </div>
   );

@@ -3,7 +3,7 @@ import ReviewTile from './ReviewTile';
 import Sorting from './Sorting';
 import NewReviewForm from './NewReviewForm';
 
-function ReviewsList({ filteredReviews, filters }) {
+function ReviewsList({ filteredReviews, filters, getReviewsMeta }) {
   // console.log('filteredReviews: ', filteredReviews);
   let moreButton;
   const [listLength, setListLength] = useState(2);
@@ -45,7 +45,7 @@ function ReviewsList({ filteredReviews, filters }) {
   return (
     <div className="reviewsList">
       <h2>Reviews List</h2>
-      <NewReviewForm setAForm={setAForm}/>
+      <NewReviewForm setAForm={setAForm} getReviewsMeta={getReviewsMeta} />
       <Sorting sortedFilteredReviews={sortedFilteredReviews} updateSetSortedFilteredReviews={updateSetSortedFilteredReviews} />
       {reviewTile()}
       {moreButton}

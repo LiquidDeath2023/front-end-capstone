@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-function NewReviewForm({ setAForm }) {
+function NewReviewForm({ setAForm, getReviewsMeta }) {
   const [rating, setRating] = useState(0);
   // const [hover, setHover] = useState(0);
   const [recommendation, setRecommendation] = useState(false);
+  const [characteristics, setCharacteristics] = useState({Size: null, Width: null, Comfort: null, Quality: null, Length: null, Fit: null});
 
   const starMeaning = {
     1: "Poor",
@@ -17,8 +18,16 @@ function NewReviewForm({ setAForm }) {
     setRecommendation(value);
   }
 
+  const updateCharacteristics = (key, value) => {
+    const newCharacteristics = { ...characteristics, [key]: value };
+    // tempObj[key] = value;
+    console.log('updated: ', newCharacteristics);
+    // console.log(tempObj[key]);
+    setCharacteristics(newCharacteristics);
+  }
+
   const renderStars = () => {
-    return [1, 2, 3, 4, 5].map((index) => {
+    return [1, 2, 3, 4, 5].map((index, value) => {
       if (index <= rating) {
         return (
           <div value={index} onClick={() => setRating(index)}>⭐</div>
@@ -30,6 +39,24 @@ function NewReviewForm({ setAForm }) {
       }
     })
   }
+
+  const renderCharacteristics = () => {
+    return Object.keys(getReviewsMeta.characteristics).map((characteristic) => {
+      return (
+        <div style={{ display:'flex' }}>{characteristic}
+          {
+            [1, 2, 3, 4, 5].map((index) => {
+              return (
+                <label>
+                  <input type="radio" name={characteristic} value={index} checked={characteristics[characteristic] === index} onChange={() => updateCharacteristics(characteristic, index)}/>
+                </label>
+              )
+            })
+          }
+        </div>
+      )
+    })
+  };
 
   const checkKeyDown = (e) => {
     if (e.key === 'Enter') {
@@ -87,9 +114,10 @@ function NewReviewForm({ setAForm }) {
             </label>
           </label>
           {/* Characteristics */}
-          {/* <label >Characteristics - INCOMPLETE <br />
-            <input type="text" name="characteristics" required /></label>
-          <label>Review Summary<br />
+          <label className="newReviewCharacteristics">Characteristics - INCOMPLETE <br />
+            {renderCharacteristics()}
+          </label>
+          {/* <label>Review Summary<br />
             <textarea maxLength="100" name="summary" /></label>
           <label>Review Body<br />
             <textarea maxLength="1000" rows="5" name="body" /></label>
