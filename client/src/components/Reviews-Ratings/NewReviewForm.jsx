@@ -5,17 +5,19 @@ function NewReviewForm({ setAForm }) {
   // const [hover, setHover] = useState(0);
   const [recommendation, setRecommendation] = useState(false);
 
+  const starMeaning = {
+    1: "Poor",
+    2: "Fair",
+    3: "Average",
+    4: "Good",
+    5: "Great"
+  }
+
   const updateRecommendation = (value) => {
     setRecommendation(value);
   }
 
   const renderStars = () => {
-    /*
-    // array = [
-    //   {1, gold}
-    //   {}
-    // ]
-    */
     return [1, 2, 3, 4, 5].map((index) => {
       if (index <= rating) {
         return (
@@ -28,6 +30,7 @@ function NewReviewForm({ setAForm }) {
       }
     })
   }
+
   const checkKeyDown = (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
@@ -71,8 +74,10 @@ function NewReviewForm({ setAForm }) {
           <label>Overall Rating<br />
             <div className="newReviewStarRating">
               {renderStars()}
+              {(rating !== 0) ? <div>{starMeaning[rating]}</div> : null}
             </div>
           </label>
+          {/* Boolean Product Recommendation - utilizes radio buttons*/}
           <label>Do you recommend this product?<br />
             <label>Yes
               <input type="radio" name="recommendation_true" value={true} checked={recommendation} onChange={() => updateRecommendation(true)}/>
@@ -81,6 +86,7 @@ function NewReviewForm({ setAForm }) {
               <input type="radio" name="recommendation_false" value={false} checked={!recommendation} onChange={() => updateRecommendation(false)} />
             </label>
           </label>
+          {/* Characteristics */}
           {/* <label >Characteristics - INCOMPLETE <br />
             <input type="text" name="characteristics" required /></label>
           <label>Review Summary<br />
