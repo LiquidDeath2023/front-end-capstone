@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 function NewReviewForm({ setAForm }) {
+  const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
   const [recommendation, setRecommendation] = useState(false);
 
   const updateRecommendation = (value) => {
@@ -44,11 +46,27 @@ function NewReviewForm({ setAForm }) {
           <h2>Write a Review</h2>
           <i onClick={() => close()} />
         </div>
-        <h3>About the {'FILL ME IN'}</h3>
         <form onSubmit={(e) => submitHandler(e)} onKeyDown={(e) => checkKeyDown(e)}>
-          {/* <label>Overall Rating - INCOMPLETE<br />
-            <textarea maxLength="5" rows="3" name="rating" required /></label> */}
-          <label>Do you recommend this product? - INCOMPLETE<br />
+          <label>Overall Rating - INCOMPLETE<br />
+          <div className="star-rating">
+            {[...Array(5)].map((star, index) => {
+              index += 1;
+              return (
+                <button
+                  type="button"
+                  key={index}
+                  className={index <= (hover || rating) ? "on" : "off"}
+                  onClick={() => setRating(index)}
+                  onMouseEnter={() => setHover(index)}
+                  onMouseLeave={() => setHover(rating)}
+                >
+                  <span className="star">&#9733;</span>
+                </button>
+              );
+            })}
+          </div>
+          </label>
+          <label>Do you recommend this product?<br />
             <label>Yes
               <input type="radio" name="recommendation_true" value={true} checked={recommendation} onChange={() => updateRecommendation(true)}/>
             </label>
