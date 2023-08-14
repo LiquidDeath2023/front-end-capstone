@@ -1,9 +1,3 @@
 node_modules
 exampleData
 client/dist/bundle.js
-.eslintrc.json
-.prettierrc.json
-client/dist
-client/dist/bundle.js
-.env
-client/dist/bundle.js
