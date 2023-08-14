@@ -54,7 +54,7 @@ function ReviewTile({review}) {
       // console.log('true');
       return <div>✔️ I recommend this product</div>;
     }
-    return <div></div>;
+    return null;
   };
 
   return (

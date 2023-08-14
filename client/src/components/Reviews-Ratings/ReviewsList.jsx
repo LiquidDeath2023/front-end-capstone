@@ -37,7 +37,7 @@ function ReviewsList({ filteredReviews, filters, getReviewsMeta }) {
   if (sortedFilteredReviews.length > 2) {
     moreButton = <button className="moreReviewsButton" type="button" onClick={handleClick}>More Reviews</button>;
   } else {
-    moreButton = <div></div>;
+    moreButton = null;
   }
 
   const addReviewButton = () => <button type="button" id="add-answer-btn" onClick={() => setAForm(true)} >Add Review</button>
@@ -45,12 +45,12 @@ function ReviewsList({ filteredReviews, filters, getReviewsMeta }) {
   return (
     <div className="reviewsList">
       <h2>Reviews List</h2>
-      <NewReviewForm setAForm={setAForm} getReviewsMeta={getReviewsMeta} />
+      {/* TESTING ONLY <NewReviewForm setAForm={setAForm} getReviewsMeta={getReviewsMeta} /> */}
       <Sorting sortedFilteredReviews={sortedFilteredReviews} updateSetSortedFilteredReviews={updateSetSortedFilteredReviews} />
       {reviewTile()}
       {moreButton}
       {addReviewButton()}
-      {/* { aForm ? (<NewReviewForm setAForm={setAForm}/>) : <div></div>} */}
+      { aForm ? (<NewReviewForm setAForm={setAForm} getReviewsMeta={getReviewsMeta}/>) : null}
     </div>
   );
 }

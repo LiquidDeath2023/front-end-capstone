@@ -29,7 +29,7 @@ function ReviewTileBody({review}) {
     if (reviewLen > 250) {
       return <button className="expandReviewTextButton" onClick={helpExpandBody} type="button">{buttonText}</button>;
     }
-    return <div></div>;
+    return null;
   };
 
   // map photos into review body. will add onto this at later time

@@ -20,7 +20,7 @@ function NewReviewForm({ setAForm, getReviewsMeta }) {
 
   const updateCharacteristics = (key, value) => {
     const newCharacteristics = { ...characteristics, [key]: value };
-    console.log('updated: ', newCharacteristics);
+    ('updated: ', newCharacteristics);
     setCharacteristics(newCharacteristics);
   };
 
@@ -57,7 +57,7 @@ function NewReviewForm({ setAForm, getReviewsMeta }) {
   };
 
   const renderPhotoPage = () => {
-    console.log('click');
+    ('click');
   };
 
   const checkKeyDown = (e) => {
@@ -72,19 +72,19 @@ function NewReviewForm({ setAForm, getReviewsMeta }) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log('submitHandler clicked');
+    ('submitHandler clicked');
     // const body = e.target.body.value;
     // const name = e.target.name.value;
     // const email = e.target.email.value;
     // const product_id = currProductId;
     // sendQuestion({ body, name, email, product_id });
     close();
-    // console.log({ body, name, email, product_id });
+    // ({ body, name, email, product_id });
   };
 
   // const sendQuestion = (data) => {
   //   axios.post('/qa/questions', data)
-  //     .catch(() => console.log('error posting question'));
+  //     .catch(() => ('error posting question'));
   // }
 
   const close = () => {

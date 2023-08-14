@@ -72,7 +72,7 @@ function BreakdownComp({filters, updateFilters}) {
   return (
     <div className="actualBreakdown">
       {generateObj()}
-      {filters.ratings.length > 0 ? filtersApplied() : <div></div>}
+      {filters.ratings.length > 0 ? filtersApplied() : null}
     </div>
   );
 }
