@@ -12,19 +12,17 @@ function NewReviewForm({ setAForm, getReviewsMeta }) {
     3: "Average",
     4: "Good",
     5: "Great"
-  }
+  };
 
   const updateRecommendation = (value) => {
     setRecommendation(value);
-  }
+  };
 
   const updateCharacteristics = (key, value) => {
     const newCharacteristics = { ...characteristics, [key]: value };
-    // tempObj[key] = value;
     console.log('updated: ', newCharacteristics);
-    // console.log(tempObj[key]);
     setCharacteristics(newCharacteristics);
-  }
+  };
 
   const renderStars = () => {
     return [1, 2, 3, 4, 5].map((index, value) => {
@@ -38,7 +36,7 @@ function NewReviewForm({ setAForm, getReviewsMeta }) {
         )
       }
     })
-  }
+  };
 
   const renderCharacteristics = () => {
     return Object.keys(getReviewsMeta.characteristics).map((characteristic) => {
@@ -78,7 +76,7 @@ function NewReviewForm({ setAForm, getReviewsMeta }) {
     // sendQuestion({ body, name, email, product_id });
     close();
     // console.log({ body, name, email, product_id });
-  }
+  };
 
   // const sendQuestion = (data) => {
   //   axios.post('/qa/questions', data)
@@ -87,49 +85,48 @@ function NewReviewForm({ setAForm, getReviewsMeta }) {
 
   const close = () => {
     setForm(false);
-  }
+  };
 
   return (
     <div>
       <div>
-        <div>
-          <h2>Write a Review</h2>
-          <i onClick={() => close()} />
-        </div>
-        <form onSubmit={(e) => submitHandler(e)} onKeyDown={(e) => checkKeyDown(e)}>
-          {/* Overall Rating by Clicking Number of Stars*/}
-          <label>Overall Rating<br />
-            <div className="newReviewStarRating">
-              {renderStars()}
-              {(rating !== 0) ? <div>{starMeaning[rating]}</div> : null}
-            </div>
-          </label>
-          {/* Boolean Product Recommendation - utilizes radio buttons*/}
-          <label>Do you recommend this product?<br />
-            <label>Yes
-              <input type="radio" name="recommendation_true" value={true} checked={recommendation} onChange={() => updateRecommendation(true)}/>
-            </label>
-            <label>No
-              <input type="radio" name="recommendation_false" value={false} checked={!recommendation} onChange={() => updateRecommendation(false)} />
-            </label>
-          </label>
-          {/* Characteristics */}
-          <label className="newReviewCharacteristics">Characteristics - INCOMPLETE <br />
-            {renderCharacteristics()}
-          </label>
-          {/* <label>Review Summary<br />
-            <textarea maxLength="100" name="summary" /></label>
-          <label>Review Body<br />
-            <textarea maxLength="1000" rows="5" name="body" /></label>
-          <label>Upload Photos - INCOMPLETE<br />
-            <textarea maxLength="1000" name="photos" /></label>
-          <label>Nickname<br />
-            <textarea maxLength="20" rows="3" name="nickname" /></label>
-          <label >E-mail<br />
-            <input type="email" maxLength="60" placeholder="jack@email.com" name="email" required /></label> */}
-          <input id="q-submit-btn" type="submit" />
-        </form>
+        <h2>Write a Review</h2>
+        <i onClick={() => close()} />
       </div>
+      <form onSubmit={(e) => submitHandler(e)} onKeyDown={(e) => checkKeyDown(e)}>
+        {/* Overall Rating by Clicking Number of Stars */}
+        <label>Overall Rating<br />
+          <div className="newReviewStarRating">
+            {renderStars()}
+            {(rating !== 0) ? <div>{starMeaning[rating]}</div> : null}
+          </div>
+        </label>
+        {/* Boolean Product Recommendation - utilizes radio buttons */}
+        <label>Do you recommend this product?<br />
+          <label>Yes
+            <input type="radio" name="recommendation_true" value={true} checked={recommendation} onChange={() => updateRecommendation(true)}/>
+          </label>
+          <label>No
+            <input type="radio" name="recommendation_false" value={false} checked={!recommendation} onChange={() => updateRecommendation(false)} />
+          <br /></label>
+        </label>
+        {/* Characteristics */}
+        <label className="newReviewCharacteristics">Characteristics <br />
+          <div>{renderCharacteristics()}</div>
+        </label>
+        {/* Text Inputs */}
+        <label>Review Summary <br />
+          <textarea maxLength="100" name="summary" /> <br /></label>
+        <label>Review Body <br />
+          <textarea maxLength="1000" rows="5" name="body" /> <br /></label>
+        <label>Upload Photos - INCOMPLETE<br />
+          <textarea maxLength="1000" name="photos" /> <br /> </label>
+        <label>Nickname<br />
+          <input type="text" name="nickname" placeholder="happycustomer20" /><br /></label>
+        <label >E-mail<br />
+          <input type="email" maxLength="60" placeholder="jack@email.com" name="email" required /></label>
+        <input id="q-submit-btn" type="submit" />
+      </form>
     </div>
   );
 };
