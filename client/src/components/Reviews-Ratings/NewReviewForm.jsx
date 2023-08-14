@@ -2,11 +2,31 @@ import React, { useState } from 'react';
 
 function NewReviewForm({ setAForm }) {
   const [rating, setRating] = useState(0);
-  const [hover, setHover] = useState(0);
+  // const [hover, setHover] = useState(0);
   const [recommendation, setRecommendation] = useState(false);
 
   const updateRecommendation = (value) => {
     setRecommendation(value);
+  }
+
+  const renderStars = () => {
+    /*
+    // array = [
+    //   {1, gold}
+    //   {}
+    // ]
+    */
+    return [1, 2, 3, 4, 5].map((index) => {
+      if (index <= rating) {
+        return (
+          <div value={index} onClick={() => setRating(index)}>⭐</div>
+        )
+      } else {
+        return (
+          <div value={index} onClick={() => setRating(index)}>☆</div>
+        )
+      }
+    })
   }
   const checkKeyDown = (e) => {
     if (e.key === 'Enter') {
@@ -47,24 +67,11 @@ function NewReviewForm({ setAForm }) {
           <i onClick={() => close()} />
         </div>
         <form onSubmit={(e) => submitHandler(e)} onKeyDown={(e) => checkKeyDown(e)}>
-          <label>Overall Rating - INCOMPLETE<br />
-          <div className="star-rating">
-            {[...Array(5)].map((star, index) => {
-              index += 1;
-              return (
-                <button
-                  type="button"
-                  key={index}
-                  className={index <= (hover || rating) ? "on" : "off"}
-                  onClick={() => setRating(index)}
-                  onMouseEnter={() => setHover(index)}
-                  onMouseLeave={() => setHover(rating)}
-                >
-                  <span className="star">&#9733;</span>
-                </button>
-              );
-            })}
-          </div>
+          {/* Overall Rating by Clicking Number of Stars*/}
+          <label>Overall Rating<br />
+            <div className="newReviewStarRating">
+              {renderStars()}
+            </div>
           </label>
           <label>Do you recommend this product?<br />
             <label>Yes

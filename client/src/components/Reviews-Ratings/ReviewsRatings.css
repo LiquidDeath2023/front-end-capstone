@@ -154,3 +154,7 @@
 .productBreakdownLabelsHigh {
   margin-right: 0;
 }
+
+.newReviewStarRating {
+  display: flex;
+}
