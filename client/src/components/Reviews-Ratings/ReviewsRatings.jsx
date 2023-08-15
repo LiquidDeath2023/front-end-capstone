@@ -20,8 +20,11 @@ function ReviewsRatings() {
 
   return (
     <div className="ratingsReviewsContainer" id="ratingsReviewsContainerId">
-      <RatingBreakdown filters={filters} updateFilters={updateFilters} />
-      <ReviewsList filteredReviews={filteredReviews} filters={filters} getReviewsMeta={getReviewsMeta}/>
+      <h2>Ratings & Reviews</h2>
+      <div className="ratingsReviewsContent">
+        <RatingBreakdown filters={filters} updateFilters={updateFilters} />
+        <ReviewsList filteredReviews={filteredReviews} filters={filters} getReviewsMeta={getReviewsMeta}/>
+      </div>
     </div>
   );
 }

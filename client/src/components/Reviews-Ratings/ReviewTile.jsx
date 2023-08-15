@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import ReviewTileBody from './ReviewTileBody';
 // const reviewStars = require('./helpers.js');
 // import { reviewStars } from './helpers.js';
@@ -60,6 +59,8 @@ function ReviewTile({review}) {
     year: 'numeric',
   });
 
+  const userAndDate = review.reviewer_name + ',  ' + formattedDate;
+
   // if summary > 60 characters, truncate it
   const reviewSummary = () => {
     if (review.summary.length > 60) {
@@ -81,11 +82,14 @@ function ReviewTile({review}) {
     <div className="reviewTile">
       {/* <h2>Review Tile</h2> */}
       <div className="starRating">{reviewStars(review.rating)}</div>
-      <div className="reviewDate">{formattedDate}</div>
+      <div className="topRightReviewTile">{userAndDate}
+        {/* <div className="reviewerName">{review.reviewer_name}</div>
+        <div className="reviewDate">{formattedDate}</div> */}
+      </div>
+      <div className="break"></div>
       <div className="reviewSummary">{reviewSummary()}</div>
       <ReviewTileBody review={review}/>
       <div className="reviewRec">{reviewRecommend()}</div>
-      <div className="reviewerName">{review.reviewer_name}</div>
       <div className="reviewResponse">Response from seller: {review.response}</div>
       <div className="reviewHelpfulness">
         {`Helpful? `}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { getReviewsMeta } from './exampleData.js'; // putting this here to until master updated with prev changes
+import { sumHelper } from './helpers.js';
 
 function BreakdownComp({filters, updateFilters}) {
   // data comes from getReviewsMeta
@@ -16,15 +17,6 @@ function BreakdownComp({filters, updateFilters}) {
       prevFilters.splice(indexOfKey, 1);
     }
     updateFilters({ ratings: prevFilters });
-  };
-
-  // sum helper function
-  const sumHelper = (array) => {
-    let sum = 0;
-    for (var i = 0; i < array.length; i++) {
-      sum += array[i];
-    }
-    return sum;
   };
 
   // this function generates the average breakdown bars

@@ -75,7 +75,7 @@ function App() {
   if (reviewsMeta) {
     return (
       <div>
-        <Overview
+        {/* <Overview
           product={product}
           reviewsMeta={reviewsMeta}
           reviews={reviews}
@@ -84,7 +84,7 @@ function App() {
         <QuestionsAndAnswers
           currProductId={product.id}
           currProductName={product.name}
-        />
+        /> */}
         <div id="ratingsReviewsContainerId">
           <ReviewsRatings />
         </div>

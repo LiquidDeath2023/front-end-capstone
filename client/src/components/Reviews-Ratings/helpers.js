@@ -119,6 +119,13 @@ module.exports = {
     }
     return 0;
   },
+  sumHelper: (array) => {
+    let sum = 0;
+    for (var i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    return sum;
+  },
   // reviewStars: (score) => {
   //   const stars = [];
   //   // "rounding", using 0.65 and 0.35 for more noticeable impact

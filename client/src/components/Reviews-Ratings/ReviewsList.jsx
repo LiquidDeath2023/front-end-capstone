@@ -40,11 +40,11 @@ function ReviewsList({ filteredReviews, filters, getReviewsMeta }) {
     moreButton = null;
   }
 
-  const addReviewButton = () => <button type="button" id="add-answer-btn" onClick={() => setAForm(true)} >Add Review</button>
+  const addReviewButton = () => <button type="button" onClick={() => setAForm(true)} >Add Review</button>
 
   return (
     <div className="reviewsList">
-      <h2>Reviews List</h2>
+      <h3>Reviews List</h3>
       {/* TESTING ONLY <NewReviewForm setAForm={setAForm} getReviewsMeta={getReviewsMeta} /> */}
       <Sorting sortedFilteredReviews={sortedFilteredReviews} updateSetSortedFilteredReviews={updateSetSortedFilteredReviews} />
       {reviewTile()}

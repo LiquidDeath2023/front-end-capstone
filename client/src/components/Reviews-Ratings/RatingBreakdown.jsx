@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import BreakdownComp from './BreakdownComp';
 import ProductBreakdown from './ProductBreakdown';
 
@@ -58,7 +57,7 @@ function RatingBreakdown({filters, updateFilters}) {
 
   return (
     <div className="ratingBreakdown">
-      <h2>Rating Breakdown</h2>
+      <h3>Rating Breakdown</h3>
       <div className="stars-container">
         <div>{calcAvgRating(getReviewsMeta.ratings)}{reviewStars(avgRating)}</div>
       </div>
@@ -67,5 +66,6 @@ function RatingBreakdown({filters, updateFilters}) {
     </div>
   );
 }
+//asdf
 
 export default RatingBreakdown;
