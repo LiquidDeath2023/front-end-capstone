@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Answer from '../Answers/Answer';
 import utils from '../../helpers/helpers';
@@ -14,7 +14,7 @@ function Question({ question, currProductName, query }) {
   const { question_helpfulness } = question;
   const [helpfulness, setHelpfulness] = useState([question_helpfulness, false]);
 
-  React.useEffect(() => {
+  const ansFetcher = () => {
     axios.get(`/qa/questions/${question.question_id}/answers`)
       .then((res) => res.data.sort(utils.compare('helpfulness')))
       .then((sortedHelpfulness) => utils.sortSellers(sortedHelpfulness))
@@ -22,6 +22,10 @@ function Question({ question, currProductName, query }) {
         setAnswersDatabase(sortedSellers);
         setAnswers(sortedSellers.slice(0, 2));
       });
+  }
+
+  React.useEffect(() => {
+    ansFetcher();
   }, []);
 
   const expandOrCollapse = () => {
@@ -37,12 +41,41 @@ function Question({ question, currProductName, query }) {
     }
   };
 
+  useEffect(() => {
+    if (query.length > 2) {
+      // setAnswers(answersDatabase.filter((a) => {
+      //   if (a.body.toLowerCase().includes(query.toLowerCase())) {
+      //     console.log(a.body);
+      //     const aIDX = a.body.toLowerCase().indexOf(query.toLowerCase());
+      //     a.body2 = utils.highlighter(a.body, aIDX, query.length);
+      //     return true;
+      //   }
+      // }));
+      setAnswers(answersDatabase.reduce((filtered, ans) => {
+        if (ans.body.toLowerCase().includes(query.toLowerCase())) {
+          const aIDX = ans.body.toLowerCase().indexOf(query.toLowerCase());
+          ans.body2 = utils.highlighter(ans.body, aIDX, query.length);
+          filtered.push(ans);
+        }
+        return filtered;
+      }, [])
+      )
+
+
+    } else if (query.length <= 2) {
+      ansFetcher();
+    }
+  }, [query])
+
   const addHelpfulness = () => {
     if (!helpfulness[1]) {
       setHelpfulness([helpfulness[0] + 1, true]);
       requests.markQuestionHelpful(question.question_id);
     }
   };
+
+
+
   return (
     <div className="question-container">
       <div className="flex justify-between p-[0.313rem] items-end">
@@ -75,7 +108,7 @@ function Question({ question, currProductName, query }) {
       {
         aForm && <AnswerForm setAForm={setAForm} currProductName={currProductName} questionBody={question.question_body} questionId={question.question_id} />
       }
-      <hr className="mt-[0.313rem]"/>
+      <hr className="mt-[0.313rem]" />
     </div>
 
   );

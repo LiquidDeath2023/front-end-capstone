@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import requests from '../../helpers/requests';
 import AnswerPhoto from './AnswerPhoto';
 import utils from '../../helpers/helpers';
@@ -31,12 +31,12 @@ function Answer({ answer, query }) {
     return <span className='text-[#007185]'>{answerer_name}</span>
   }
 
-  React.useEffect(() => {
-    if (body.toLowerCase().includes(query.toLowerCase()) && query.length > 2) {
-      const aIDX = body.toLowerCase().indexOf(query.toLowerCase());
-      answer.body2 = utils.highlighter(body, aIDX, query.length);
-    }
-  }, [query])
+  // useEffect(() => {
+  //   if (body.toLowerCase().includes(query.toLowerCase()) && query.length > 2) {
+  //     const aIDX = body.toLowerCase().indexOf(query.toLowerCase());
+  //     answer.body2 = utils.highlighter(body, aIDX, query.length);
+  //   }
+  // }, [query])
 
   return (
     <div className="answer-container bg-black/[0.1] p-[0.313rem] mx-0 my-[0.313rem]">
@@ -46,12 +46,13 @@ function Answer({ answer, query }) {
         </h3>
         <h3 className="text-[1.17em]">
           {answer.body2 ? answer.body2 : body}
+          {/* {body} */}
         </h3>
       </div>
       <div className="answer-photos-container flex gap-x-[0.313rem]">
         {
-          photos.map((photo, index) => (
-            <AnswerPhoto photo={photo} key={photo.id} index={index} />
+          photos.map((photo) => (
+            <AnswerPhoto photo={photo} key={photo.id} />
           ))
         }
       </div>
