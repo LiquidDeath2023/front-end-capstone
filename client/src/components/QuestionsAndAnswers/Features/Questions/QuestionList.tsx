@@ -6,7 +6,6 @@ import Question from './Question';
 function QuestionList({ setDisplayMore, numOfQuestions, query, currProductId, currProductName }) {
   const [questionsDatabase, setQuestionsDatabase] = useState([]);
   const [questions, setQuestions] = useState([]);
-  const [highlightedQuestion, setHighlightedQuestion] = useState([false, null]);
 
   const fetch = () => {
     axios.get('/qa/questions', { params: { currProductId } })
@@ -63,7 +62,7 @@ function QuestionList({ setDisplayMore, numOfQuestions, query, currProductId, cu
     <div className="questions-container">
       {
         questions.map((question) => {
-          return (<Question question={question} key={question.question_id} currProductName={currProductName} highlightedQuestion={highlightedQuestion}
+          return (<Question question={question} key={question.question_id} currProductName={currProductName}
             query={query} />)
         })
       }
