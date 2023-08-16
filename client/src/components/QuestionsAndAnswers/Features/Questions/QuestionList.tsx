@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import utils from './helpers/helpers';
+import utils from '../../helpers/helpers';
 import Question from './Question';
 
 function QuestionList({ setDisplayMore, numOfQuestions, query, currProductId, currProductName }) {

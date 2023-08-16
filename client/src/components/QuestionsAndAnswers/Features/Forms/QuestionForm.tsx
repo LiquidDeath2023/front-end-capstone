@@ -1,5 +1,5 @@
 import React from 'react';
-import './qa-styles/Form.styles.css';
+import '../../qa-styles/Form.styles.css';
 import axios from 'axios';
 
 function QuestionForm({ setQForm, currProductId, currProductName }) {

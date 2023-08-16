@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './qa-styles/QuestionsAndAnswers.styles.css';
-import Search from './Search';
-import ExpandAndAdd from './ExpandAndAdd';
-import QuestionList from './QuestionList';
+import Search from './Features/Search/Search';
+import ExpandAndAdd from './Features/ExpandAndAdd/ExpandAndAdd';
+import QuestionList from './Features/Questions/QuestionList';
 
 function QuestionsAndAnswers({ currProductId, currProductName }) {
   const [displayMore, setDisplayMore] = useState(false);

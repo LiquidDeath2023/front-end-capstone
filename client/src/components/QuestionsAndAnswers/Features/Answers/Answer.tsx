@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import requests from './helpers/requests';
+import requests from '../../helpers/requests';
 import AnswerPhoto from './AnswerPhoto';
 
 function Answer({ answer, query }) {

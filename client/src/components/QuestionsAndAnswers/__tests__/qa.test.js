@@ -1,5 +1,5 @@
 import React from "react";
-import QuestionForm from "../QuestionForm";
+import QuestionForm from "../Features/Forms/QuestionForm";
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom'
 

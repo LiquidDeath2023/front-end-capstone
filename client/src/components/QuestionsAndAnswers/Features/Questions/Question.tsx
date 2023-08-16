@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Answer from './Answer';
-import utils from './helpers/helpers';
-import requests from './helpers/requests';
-import AnswerForm from './AnswerForm';
+import Answer from '../Answers/Answer';
+import utils from '../../helpers/helpers';
+import requests from '../../helpers/requests';
+import AnswerForm from '../Forms/AnswerForm';
 
 function Question({ question, currProductName, query }) {
   const [answersDatabase, setAnswersDatabase] = useState([]);

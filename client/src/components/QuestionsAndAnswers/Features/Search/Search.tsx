@@ -1,5 +1,5 @@
 import React from 'react';
-import './qa-styles/Search.styles.css'
+import '../../qa-styles/Search.styles.css'
 
 function Search({ setQuery }) {
   const setSearch = (event: any) => {
