@@ -45,16 +45,16 @@ function Question({ question, currProductName, query }) {
   };
   return (
     <div className="question-container">
-      <div className="question-title-container flex justify-between p-[0.313rem]">
+      <div className="flex justify-between p-[0.313rem] items-end">
         <div className="question-labeler flex gap-x-[0.313rem]">
-          <div>
+          <h3 className="text-[1.17em] font-bold">
             Q:
-          </div>
-          <div>
+          </h3>
+          <h3 className="text-[1.17em] font-bold">
             {question.question_body2 ? question.question_body2 : question.question_body}
-          </div>
+          </h3>
         </div>
-        <div>
+        <h4 className="text-[1em]">
           {'Helpful? '}
           <button type="button" id="question-yes" className="hover:underline" onClick={() => addHelpfulness()} onKeyDown={() => addHelpfulness()}>Yes</button>
           {` (${helpfulness[0]}) | `}
@@ -62,7 +62,7 @@ function Question({ question, currProductName, query }) {
             document.body.style.overflow = 'hidden';
             setAForm(true)
           }} onKeyDown={() => addAnswerModule()}>Add Answer</button>
-        </div>
+        </h4>
       </div>
       <div className="answers-container">
         {
@@ -75,6 +75,7 @@ function Question({ question, currProductName, query }) {
       {
         aForm && <AnswerForm setAForm={setAForm} currProductName={currProductName} questionBody={question.question_body} questionId={question.question_id} />
       }
+      <hr className="mt-[0.313rem]"/>
     </div>
 
   );

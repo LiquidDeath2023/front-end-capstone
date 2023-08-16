@@ -28,7 +28,7 @@ function Answer({ answer, query }) {
     if (answerer_name === 'Seller') {
       return <span className='font-bold'>{answerer_name}</span>
     }
-    return <span>{answerer_name}</span>
+    return <span className='text-[#007185]'>{answerer_name}</span>
   }
 
   React.useEffect(() => {
@@ -41,12 +41,12 @@ function Answer({ answer, query }) {
   return (
     <div className="answer-container bg-black/[0.1] p-[0.313rem] mx-0 my-[0.313rem]">
       <div className="answer-labeler flex gap-x-[0.313rem]">
-        <div>
+        <h3 className="text-[1.17em] font-bold">
           A:
-        </div>
-        <div>
+        </h3>
+        <h3 className="text-[1.17em]">
           {answer.body2 ? answer.body2 : body}
-        </div>
+        </h3>
       </div>
       <div className="answer-photos-container flex gap-x-[0.313rem]">
         {
@@ -55,14 +55,14 @@ function Answer({ answer, query }) {
           ))
         }
       </div>
-      <div className="answer-info">
+      <h4 className="text-[1em]">
         {'by '}
         {usernameCheck()}
         {`, ${formatDate} | Helpful? `}
         <button type="button" id="answer-yes" className="hover:underline" onClick={() => addHelpfulness()} onKeyDown={() => addHelpfulness()}>Yes</button>
         {` (${helpfulness[0]}) | `}
         <button type="button" id="report-btn" className="hover:text-red-500" onClick={() => reportFunction()} onKeyDown={() => reportFunction()}>{report[0]}</button>
-      </div>
+      </h4>
       {
         delete answer.body2
       }
