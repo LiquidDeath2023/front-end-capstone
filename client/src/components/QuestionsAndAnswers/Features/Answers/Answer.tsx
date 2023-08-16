@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import requests from '../../helpers/requests';
 import AnswerPhoto from './AnswerPhoto';
+import utils from '../../helpers/helpers';
 
 function Answer({ answer, query }) {
   const { body, answerer_name, date, photos } = answer;
@@ -33,12 +34,7 @@ function Answer({ answer, query }) {
   React.useEffect(() => {
     if (body.toLowerCase().includes(query.toLowerCase()) && query.length > 2) {
       const aIDX = body.toLowerCase().indexOf(query.toLowerCase());
-      answer.body2 =
-        (<>
-          {body.slice(0, aIDX)}
-          <span className='bg-[#FBF719]'>{query}</span>
-          {body.slice(aIDX + query.length)}
-        </>);
+      answer.body2 = utils.highlighter(body, aIDX, query.length);
     }
   }, [query])
 

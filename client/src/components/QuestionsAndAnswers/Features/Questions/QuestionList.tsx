@@ -39,21 +39,14 @@ function QuestionList({ setDisplayMore, numOfQuestions, query, currProductId, cu
           .map(answer => answer.body)
           .filter(body =>  body.toLowerCase().includes(query.toLowerCase())).length;
 
-
         if (q.question_body.toLowerCase().includes(query.toLowerCase()) || answerHasQuery) {
           const qIDX = q.question_body.toLowerCase().indexOf(query.toLowerCase());
-
-          q.question_body2 =
-            (<>
-              {q.question_body.slice(0, qIDX)}
-              <span className='highlight'>{query}</span>
-              {q.question_body.slice(qIDX + query.length)}
-            </>);
+          q.question_body2 = utils.highlighter(q.question_body, qIDX, query.length);
           return true;
         }
       }));
       setDisplayMore(false);
-    } else if (query.length === 2) {
+    } else if (query.length <= 2) {
       fetch();
     }
     else {
