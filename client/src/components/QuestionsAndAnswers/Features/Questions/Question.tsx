@@ -22,7 +22,6 @@ function Question({ question, currProductName, query }) {
         setAnswers(sortedSellers.slice(0, 2));
       })
   }
-
   useEffect(() => {
     ansFetcher();
   }, []);
@@ -41,7 +40,7 @@ function Question({ question, currProductName, query }) {
   };
 
   useEffect(() => {
-    if (query.length >= 3) {
+    // if (query.length >= 3) {
       setAnswers(answersDatabase.reduce((filtered, ans) => {
         if (ans.body.toLowerCase().includes(query.toLowerCase())) {
           const aIDX = ans.body.toLowerCase().indexOf(query.toLowerCase());
@@ -50,9 +49,9 @@ function Question({ question, currProductName, query }) {
         }
         return filtered;
       }, []))
-    } else {
-      ansFetcher();
-    }
+    // } else {
+    //   ansFetcher();
+    // }
   }, [query])
 
   const addHelpfulness = () => {
