@@ -13,6 +13,7 @@ function App() {
   // states passed to multiple components
   const [product, setProduct] = useState(initial.product);
   const [reviewsMeta, setReviewsMeta] = useState(initial.reviewsMeta);
+  const [productId, setProductId] = useState(37324);
 
   const updProduct = async (id) => {
     const newProduct = await axios.get(`/products/${id}`);
@@ -20,7 +21,8 @@ function App() {
   };
 
   const updReviewsMeta = async () => {
-    const newReviewsMeta = await axios.get(`/reviews/meta/${product.id}`);
+    // const newReviewsMeta = await axios.get(`/reviews/meta/${product.id}
+    const newReviewsMeta = await axios.get(`/reviews/meta/${productId}`);
     return newReviewsMeta;
   };
 
@@ -35,7 +37,8 @@ function App() {
   // defaults to relevant sorting order - change sort to desired sort order
   const updReviews = async (sort = "relevant", count = "5", page = "1") => {
     const newReviews = await axios.get(
-      `/reviews/${product.id}/${sort}/${count}/${page}`
+      // `/reviews/${product.id}/${sort}/${count}/${page}`
+      `/reviews/${productId}/${sort}/${count}/${page}`
     );
     return newReviews;
   };
@@ -65,17 +68,33 @@ function App() {
     });
   }, [reviewsMeta]);
 
+
+  const changeProduct = (() => {
+    if (productId === 37324) {
+      setProductId(37325);
+      updProduct(37325);
+      updReviewsMeta();
+      updReviews();
+    } else {
+      setProductId(37324);
+      updProduct(37324);
+      updReviewsMeta();
+      updReviews();
+    }
+  });
+
   // changed order of components
   if (reviewsMeta) {
     return (
       <div>
         <Overview product={product} reviewsMeta={reviewsMeta} />
         <List currentProduct={product} updateCurrentProduct={updProduct} />
+        <button onClick={() => changeProduct()}>CHANGE PRODUCT</button>
         <QuestionsAndAnswers
-          currProductId={product.id}
+          currProductId={productId}
           currProductName={product.name}
         />
-        <ReviewsRatings id="ratingsReviewsContainerId" reviewsMeta={reviewsMeta} currProductId={product.id} currProductName={product.name} initial={initial} />
+        <ReviewsRatings id="ratingsReviewsContainerId" reviewsMeta={reviewsMeta} currProductId={productId} currProductName={product.name} initial={initial} />
       </div>
     );
   }
