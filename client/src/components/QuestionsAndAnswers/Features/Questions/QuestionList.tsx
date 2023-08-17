@@ -7,8 +7,8 @@ function QuestionList({ setDisplayMore, numOfQuestions, query, currProductId, cu
   const [questionsDatabase, setQuestionsDatabase] = useState([]);
   const [questions, setQuestions] = useState([]);
 
-  const fetch = () => {
-    axios.get('/qa/questions', { params: { currProductId } })
+  const questionsFetcher = async () => {
+    await axios.get('/qa/questions', { params: { currProductId } })
       .then((res) => {
         return res.data.results.sort(utils.compare('question_helpfulness'))
       })
@@ -21,7 +21,8 @@ function QuestionList({ setDisplayMore, numOfQuestions, query, currProductId, cu
   }
 
   useEffect(() => {
-    fetch();
+    console.log('Q U E S T I O N S  F E T C H E D')
+    questionsFetcher();
   }, [currProductId]);
 
   useEffect(() => {
@@ -32,22 +33,23 @@ function QuestionList({ setDisplayMore, numOfQuestions, query, currProductId, cu
   }, [numOfQuestions, query])
 
   useEffect(() => {
-    if (query.length > 2) {
+    if (query.length >= 3) {
       setQuestions(questionsDatabase.filter((q: any) => {
         const answerHasQuery = Object.values(q.answers)
           .map(answer => answer.body)
-          .filter(body =>  body.toLowerCase().includes(query.toLowerCase())).length;
+          .filter(body => body.toLowerCase().includes(query.toLowerCase())).length;
 
         if (q.question_body.toLowerCase().includes(query.toLowerCase()) || answerHasQuery) {
-          const qIDX = q.question_body.toLowerCase().indexOf(query.toLowerCase());
-          q.question_body2 = utils.highlighter(q.question_body, qIDX, query.length);
-
+          if (q.question_body.toLowerCase().includes(query.toLowerCase())) {
+            const qIDX = q.question_body.toLowerCase().indexOf(query.toLowerCase());
+            q.question_body2 = utils.highlighter(q.question_body, qIDX, query.length);
+          }
           return true;
         }
       }));
       setDisplayMore(false);
-    } else if (query.length <= 2) {
-      fetch();
+    } else if (query.length <= 3) {
+      questionsFetcher();
     }
     else {
       setQuestions(questionsDatabase.slice(0, numOfQuestions))
@@ -62,10 +64,8 @@ function QuestionList({ setDisplayMore, numOfQuestions, query, currProductId, cu
   return (
     <div className="questions-container">
       {
-        questions.map((question) => {
-          return (<Question question={question} key={question.question_id} currProductName={currProductName}
-            query={query} />)
-        })
+        questions.map((question) => (<Question question={question} key={question.question_id} currProductName={currProductName}
+            query={query} questions={questions} />))
       }
     </div>
   );

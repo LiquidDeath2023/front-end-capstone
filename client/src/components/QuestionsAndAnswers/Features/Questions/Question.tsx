@@ -10,21 +10,20 @@ function Question({ question, currProductName, query }) {
   const [answers, setAnswers] = useState([]);
   const [more, setMore] = useState(true);
   const [aForm, setAForm] = useState(false);
-
   const { question_helpfulness } = question;
   const [helpfulness, setHelpfulness] = useState([question_helpfulness, false]);
 
-  const ansFetcher = () => {
-    axios.get(`/qa/questions/${question.question_id}/answers`)
+  const ansFetcher = async () => {
+    await axios.get(`/qa/questions/${question.question_id}/answers`)
       .then((res) => res.data.sort(utils.compare('helpfulness')))
       .then((sortedHelpfulness) => utils.sortSellers(sortedHelpfulness))
       .then((sortedSellers) => {
         setAnswersDatabase(sortedSellers);
         setAnswers(sortedSellers.slice(0, 2));
-      });
+      })
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     ansFetcher();
   }, []);
 
@@ -42,15 +41,7 @@ function Question({ question, currProductName, query }) {
   };
 
   useEffect(() => {
-    if (query.length > 2) {
-      // setAnswers(answersDatabase.filter((a) => {
-      //   if (a.body.toLowerCase().includes(query.toLowerCase())) {
-      //     console.log(a.body);
-      //     const aIDX = a.body.toLowerCase().indexOf(query.toLowerCase());
-      //     a.body2 = utils.highlighter(a.body, aIDX, query.length);
-      //     return true;
-      //   }
-      // }));
+    if (query.length >= 3) {
       setAnswers(answersDatabase.reduce((filtered, ans) => {
         if (ans.body.toLowerCase().includes(query.toLowerCase())) {
           const aIDX = ans.body.toLowerCase().indexOf(query.toLowerCase());
@@ -58,11 +49,8 @@ function Question({ question, currProductName, query }) {
           filtered.push(ans);
         }
         return filtered;
-      }, [])
-      )
-
-
-    } else if (query.length <= 2) {
+      }, []))
+    } else {
       ansFetcher();
     }
   }, [query])
@@ -73,8 +61,6 @@ function Question({ question, currProductName, query }) {
       requests.markQuestionHelpful(question.question_id);
     }
   };
-
-
 
   return (
     <div className="question-container">
@@ -94,12 +80,12 @@ function Question({ question, currProductName, query }) {
           <button type="button" id="add-answer-btn" onClick={() => {
             document.body.style.overflow = 'hidden';
             setAForm(true)
-          }} onKeyDown={() => addAnswerModule()}>Add Answer</button>
+          }}>Add Answer</button>
         </h4>
       </div>
       <div className="answers-container">
         {
-          answers.map((answer: any) => <Answer answer={answer} key={answer.answer_id} query={query} />)
+          answers.map((answer: any) => (<Answer answer={answer} key={answer.answer_id} query={query} />))
         }
         {
           expandOrCollapseButtons()

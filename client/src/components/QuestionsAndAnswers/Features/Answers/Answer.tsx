@@ -38,6 +38,13 @@ function Answer({ answer, query }) {
   //   }
   // }, [query])
 
+  // if (query.length > 2) {
+  //   console.log(body, query.length, query);
+  // }
+  // if (!body.toLowerCase().includes(query.toLowerCase()) && query.length >= 3) {
+  //   return null;
+  // }
+
   return (
     <div className="answer-container bg-black/[0.1] p-[0.313rem] mx-0 my-[0.313rem]">
       <div className="answer-labeler flex gap-x-[0.313rem]">
